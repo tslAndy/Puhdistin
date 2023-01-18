@@ -27,6 +27,7 @@ public class BackgroundMovement : MonoBehaviour
 
     private void Start()
     {
+        Application.targetFrameRate = 30;
         borderX = transform.InverseTransformPoint(GetComponent<BoxCollider2D>().bounds.max).x;
 
         foreach (BackgroundLayer backgroundLayer in backgroundLayers)

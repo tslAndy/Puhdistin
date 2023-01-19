@@ -5,13 +5,7 @@ using System.IO;
 using UnityEngine;
 
 public class QuoteWriter : MonoBehaviour
-{
-    [Serializable]
-    public class Quote
-    {
-        public string quote;
-        public string author;
-    }
+{  
     public string fileName;
 
     
@@ -25,4 +19,10 @@ public class QuoteWriter : MonoBehaviour
         Debug.Log(JsonUtility.ToJson(quote));
         writer.Close();
     }
+}
+[Serializable]
+public class Quote
+{
+    public string quote;
+    public string author;
 }

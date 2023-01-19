@@ -20,14 +20,34 @@ public class QuoteReader : MonoBehaviour
     public void ShowQuote()
     {
         Quote quote = JsonUtility.FromJson<Quote>(reader.ReadLine());
-        Debug.Log(quote.quote);
+        if(quote == null)
+        {
+            reader.Close();
+            reader = new StreamReader(Application.dataPath + "/MainMenuQuotes");
+
+            quote = JsonUtility.FromJson<Quote>(reader.ReadLine());
+        }
+        string textToPrint = $"{quote.quote} \n -{quote.author}";
+        float delayBetweenLetters = 0.1f;
+
         if (quoteNumber % 2 == 0)
         {
-            textBars[0].text = $"{quote.quote} \n -{quote.author}";
+            textBars[0].text = "";
+            StartCoroutine(Print(textBars[0], textToPrint, delayBetweenLetters));
         } else
         {
-            textBars[1].text = $"{quote.quote} \n -{quote.author}";
+            textBars[1].text = "";
+            StartCoroutine(Print(textBars[1], textToPrint, delayBetweenLetters));
         }
         quoteNumber++;
+    }
+
+    IEnumerator Print(TMP_Text textBoxToPrint, string textToPrint, float delayBetweenLetters)
+    {
+        for (int i = 0; i < textToPrint.Length; i++)
+        {
+            textBoxToPrint.text += textToPrint[i];
+            yield return new WaitForSeconds(delayBetweenLetters);
+        }
     }
 }

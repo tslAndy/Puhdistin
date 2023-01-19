@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 4927374804363805630}
   - component: {fileID: 4927374804363805625}
   - component: {fileID: 2923061977857437246}
-  m_Layer: 0
+  - component: {fileID: -9052273155374674334}
+  m_Layer: 6
   m_Name: Garbage_0
   m_TagString: Plastic
   m_Icon: {fileID: 0}
@@ -111,3 +112,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.19, y: 0.6}
   m_EdgeRadius: 0
+--- !u!50 &-9052273155374674334
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4927374804363805624}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

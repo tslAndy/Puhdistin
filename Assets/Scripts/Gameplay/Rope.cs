@@ -4,19 +4,29 @@ using UnityEngine;
 
 public class Rope : MonoBehaviour
 {
+    public Transform StartPoint;
+    public Transform EndPoint;
 
     private LineRenderer lineRenderer;
     private List<RopeSegment> ropeSegments = new List<RopeSegment>();
-    private float ropeSegLen = 0.125f;
-    private int segmentLength = 70;
-    private float lineWidth = 0.1f;
+
+    [SerializeField]
+    private float ropeSegLen = 0.01f;
+    [SerializeField]
+    private int segmentLength = 50;
+    [SerializeField]
+    private float lineWidth = 0.01f;
 
     // Use this for initialization
     void Start()
     {
         this.lineRenderer = this.GetComponent<LineRenderer>();
-        Vector3 ropeStartPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        InitPoints();
+    }
 
+    public void InitPoints()
+    {
+        Vector3 ropeStartPoint = StartPoint.position;
         for (int i = 0; i < segmentLength; i++)
         {
             this.ropeSegments.Add(new RopeSegment(ropeStartPoint));
@@ -38,7 +48,7 @@ public class Rope : MonoBehaviour
     private void Simulate()
     {
         // SIMULATION
-        Vector2 forceGravity = new Vector2(0f, -1.5f);
+        Vector2 forceGravity = new Vector2(0f, -1f);
 
         for (int i = 1; i < this.segmentLength; i++)
         {
@@ -59,10 +69,16 @@ public class Rope : MonoBehaviour
 
     private void ApplyConstraint()
     {
-        //Constrant to Mouse
+        //Constrant to First Point 
         RopeSegment firstSegment = this.ropeSegments[0];
-        firstSegment.posNow = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        firstSegment.posNow = this.StartPoint.position;
         this.ropeSegments[0] = firstSegment;
+
+
+        //Constrant to Second Point 
+        RopeSegment endSegment = this.ropeSegments[this.ropeSegments.Count - 1];
+        endSegment.posNow = this.EndPoint.position;
+        this.ropeSegments[this.ropeSegments.Count - 1] = endSegment;
 
         for (int i = 0; i < this.segmentLength - 1; i++)
         {

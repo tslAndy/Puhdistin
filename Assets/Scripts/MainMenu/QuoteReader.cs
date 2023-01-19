@@ -14,7 +14,7 @@ public class QuoteReader : MonoBehaviour
     void Start()
     {
         InvokeRepeating("ShowQuote", 0.5f, delayBetweenQuotes);
-        reader = new StreamReader(Application.dataPath + "/MainMenuQuotes");
+        reader = new StreamReader(Application.dataPath + "/MainMenuQuotes.txt");
     }
 
     public void ShowQuote()
@@ -23,12 +23,12 @@ public class QuoteReader : MonoBehaviour
         if(quote == null)
         {
             reader.Close();
-            reader = new StreamReader(Application.dataPath + "/MainMenuQuotes");
+            reader = new StreamReader(Application.dataPath + "/MainMenuQuotes.txt");
 
             quote = JsonUtility.FromJson<Quote>(reader.ReadLine());
         }
         string textToPrint = $"{quote.quote} \n -{quote.author}";
-        float delayBetweenLetters = 0.1f;
+        float delayBetweenLetters = 0.05f;
 
         if (quoteNumber % 2 == 0)
         {

@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Plastic
+  - Cartoon
+  - Glass
+  - Metall
   layers:
   - Default
   - TransparentFX
@@ -11,6 +15,7 @@ TagManager:
   - 
   - Water
   - UI
+  - Garbage
   - 
   - 
   - Post processing
@@ -43,6 +48,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 362950213
+    locked: 0
+  - name: Garbage
+    uniqueID: 53254803
     locked: 0
   - name: Waves
     uniqueID: 684776115

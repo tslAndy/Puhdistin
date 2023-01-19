@@ -7,13 +7,11 @@ using UnityEngine;
 public class QuoteWriter : MonoBehaviour
 {  
     public string fileName;
-
-    
     public Quote quote;
     
     public void WriteQuote()
     {
-        StreamWriter writer = new StreamWriter(Application.dataPath + $"/{fileName}", true);
+        StreamWriter writer = new StreamWriter(Application.dataPath + $"/Quotes/{fileName}", true);
         writer.WriteLine(JsonUtility.ToJson(quote));
         Debug.Log(quote);
         Debug.Log(JsonUtility.ToJson(quote));

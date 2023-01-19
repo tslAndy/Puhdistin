@@ -151,8 +151,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81958895}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.757926, y: -1.3391, z: -2.8983848}
-  m_LocalScale: {x: 18.11938, y: 2.5055654, z: 1}
+  m_LocalPosition: {x: 2.7831, y: -1.3391, z: -2.8983848}
+  m_LocalScale: {x: 18.652742, y: 2.5055654, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2051730880}
@@ -1318,6 +1318,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &456272738 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5255917300331179534, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+  m_PrefabInstance: {fileID: 5255917300684670316}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9541c1a6d6e5f6418dd0f57f491089a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &511032994
 GameObject:
   m_ObjectHideFlags: 0
@@ -2811,7 +2822,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1413840630}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 456272738}
+        m_TargetAssemblyTypeName: LevelChangerScript, Assembly-CSharp
+        m_MethodName: FadeToLevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainGame
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1635899238
 GameObject:
   m_ObjectHideFlags: 0
@@ -3185,3 +3208,70 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 22.004524, y: 9.909222}
   m_EdgeRadius: 0
+--- !u!1001 &5255917300684670316
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.387147
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0045138
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.273552
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179534, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: levelToLoad
+      value: MainGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179571, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_Name
+      value: LevelChanger
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179571, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}

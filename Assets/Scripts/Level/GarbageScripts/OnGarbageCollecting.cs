@@ -9,18 +9,18 @@ public class OnGarbageCollecting : MonoBehaviour
     private TextMeshProUGUI scoreText, factText;
 
     private int score = 0;
-    private FactsSystem factsTelling;
+    private FactsSystem factsSystem;
 
     private void Start()
     {
-        factsTelling = GetComponent<FactsSystem>();
+        factsSystem = GetComponent<FactsSystem>();
     }
 
     public void HandleCollect(string tag)
     {
         score++;
         scoreText.SetText($"Score: {score}");
-        string fact = factsTelling.GetRandomFact(tag);
+        string fact = factsSystem.GetRandomFact(tag);
         Debug.Log(fact);
         factText.SetText(fact);
     }

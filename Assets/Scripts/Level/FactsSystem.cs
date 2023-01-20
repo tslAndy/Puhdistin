@@ -33,23 +33,6 @@ public class FactsSystem : MonoBehaviour
             garbageTags[i] = garbageInfos[i].garbageTag;
         return garbageTags;
     }
-
-    /* public string fileName;
-    /* public void WriteFacts()
-    {
-        StreamWriter writer = new StreamWriter(Application.dataPath + $"/Facts/{fileName}", true);
-        foreach (GarbageInfo garbageInfo in garbageInfos)
-        {
-            writer.WriteLine(JsonUtility.ToJson(garbageInfo.facts));
-        }
-        writer.Close();
-    } 
-
-    public void ReadFacts()
-    {
-        StreamReader reader = new StreamReader(Application.dataPath + $"/Facts/{fileName}");
-
-    } */
 }
 
 [Serializable]

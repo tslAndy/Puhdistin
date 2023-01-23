@@ -13,7 +13,10 @@ public class Harpoon : MonoBehaviour
     private Transform startPos;
 
     [SerializeField]
-    private GarbageSystem garbageSystem;
+    private OnGarbageCollecting onGarbageCollecting;
+
+    [SerializeField]
+    private GarbageSpawner garbageSpawner;
 
     private GameObject item;
     private Rigidbody2D rb;
@@ -26,7 +29,7 @@ public class Harpoon : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         fixedJoint = GetComponent<FixedJoint2D>();
-        garbageTags = garbageSystem.garbageSpawner.GetGarbageTags();
+        garbageTags = garbageSpawner.GetGarbageTags();
     }
 
     private void Update()
@@ -46,7 +49,7 @@ public class Harpoon : MonoBehaviour
             returning = true;
             fixedJoint.enabled = true;
             fixedJoint.connectedBody = item.GetComponent<Rigidbody2D>();
-            garbageSystem.onGarbageCollecting.HandleCollect(item.tag);
+            onGarbageCollecting.HandleCollect(item.tag);
         }
         else if (collision.gameObject.name == "Seabed")
         {

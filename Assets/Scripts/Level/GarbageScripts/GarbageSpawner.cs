@@ -6,8 +6,7 @@ using Random = UnityEngine.Random;
 
 public class GarbageSpawner : MonoBehaviour
 {
-    [SerializeField]
-    private Collider2D spawnZone;
+    public Collider2D spawnZone;
 
     [SerializeField]
     private int amount;
@@ -16,7 +15,7 @@ public class GarbageSpawner : MonoBehaviour
     private GameObject[] garbagePrefabs;
 
     [NonSerialized]
-    public int leftGarbage;
+    public int spawnedAmount;
 
     private void Start()
     {
@@ -51,6 +50,7 @@ public class GarbageSpawner : MonoBehaviour
                 if (maxY > startY + height) maxY = startY + height - yRadius;
 
                 spawned.transform.position = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), spawned.transform.position.z);
+                spawnedAmount++;
             }
         }
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using TMPro;
 
 public class OnGarbageCollecting : MonoBehaviour
@@ -8,7 +9,8 @@ public class OnGarbageCollecting : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI scoreText, factText;
 
-    private int score = 0;
+    [NonSerialized]
+    public int score = 0;
     private FactsSystem factsSystem;
 
     private void Start()

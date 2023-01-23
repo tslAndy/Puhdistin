@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6324685222072165293}
   - component: {fileID: 7812527039658468697}
   - component: {fileID: 1573164991755452974}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Harpoon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

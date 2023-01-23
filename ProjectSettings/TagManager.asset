@@ -17,9 +17,8 @@ TagManager:
   - UI
   - Garbage
   - 
-  - 
+  - Particles
   - Post processing
-  - 
   - 
   - 
   - 
@@ -54,4 +53,7 @@ TagManager:
     locked: 0
   - name: Waves
     uniqueID: 684776115
+    locked: 0
+  - name: Particles
+    uniqueID: 2777533581
     locked: 0

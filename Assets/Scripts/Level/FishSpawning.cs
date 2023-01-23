@@ -12,13 +12,15 @@ public class FishSpawning : MonoBehaviour
     [SerializeField]
     private GameObject[] fishPrefabs;
 
-    private GarbageSystem garbageSystem;
+    private OnGarbageCollecting onGarbageCollecting;
+    private GarbageSpawner garbageSpawner;
 
     private bool spawned;
 
     void Start()
     {
-        garbageSystem = GetComponent<GarbageSystem>();
+        onGarbageCollecting = GetComponent<OnGarbageCollecting>();
+        garbageSpawner = GetComponent<GarbageSpawner>();
     }
 
 
@@ -26,22 +28,30 @@ public class FishSpawning : MonoBehaviour
     {
         if (spawned) return;
 
-        if (garbageSystem.garbageSpawner.spawnedAmount == garbageSystem.onGarbageCollecting.score)
+        if (garbageSpawner.spawnedAmount == onGarbageCollecting.score)
             SpawnFishes();
     }
 
     private void SpawnFishes()
     {
-        Collider2D spawnZone = garbageSystem.garbageSpawner.spawnZone;
-        float yStep = (spawnZone.bounds.max.y - spawnZone.bounds.max.y) / fishesAmount;
+        Collider2D spawnZone = garbageSpawner.spawnZone;
+        float yStep = (spawnZone.bounds.max.y - spawnZone.bounds.min.y) / fishesAmount;
 
         Random rand = new Random();
 
         for (int i = 0; i < fishesAmount; i++)
         {
             GameObject fish = Instantiate(fishPrefabs[rand.Next(0, fishPrefabs.Length)], transform);
-            fish.transform.position = new Vector3(0, i * yStep * 1.5f, transform.position.z);
+            
+            float dx = (spawnZone.bounds.max.x - spawnZone.bounds.min.x) / 2 + 1;
+            if (rand.Next(0, 4) % 2 == 0)
+                dx *= -1;
 
+            float x = spawnZone.bounds.center.x + dx;
+            float y = spawnZone.bounds.min.y + i * yStep + yStep / 2;
+            fish.transform.position = new Vector3(x, y, transform.position.z);
         }
+
+        spawned = true;
     }
 }

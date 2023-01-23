@@ -112,7 +112,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4440854173501011522}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -155,11 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b1fe39e24522a14ba25a937966c2a38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
   returnSpeed: 10
   startPos: {fileID: 0}
-  garbageTags:
-  - Metall
-  - Plastic
-  - Glass
-  - Cartoon
+  onGarbageCollecting: {fileID: 0}
+  garbageSpawner: {fileID: 0}

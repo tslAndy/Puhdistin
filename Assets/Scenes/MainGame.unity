@@ -746,6 +746,7 @@ GameObject:
   - component: {fileID: 693538704}
   - component: {fileID: 693538705}
   - component: {fileID: 693538706}
+  - component: {fileID: 693538707}
   m_Layer: 4
   m_Name: Level
   m_TagString: Untagged
@@ -834,7 +835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnZone: {fileID: 693538703}
-  amount: 2
+  amount: 0
   garbagePrefabs:
   - {fileID: 1371790135330160996, guid: 33b07a18019be3f4b923cdb13a8780b5, type: 3}
   - {fileID: 3154231673714371727, guid: 55db9dfdd4ab28b4aac7cc17158604eb, type: 3}
@@ -887,6 +888,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 488650165}
   factText: {fileID: 706618334}
+--- !u!114 &693538707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693538700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ebe98314b6d9ee43904b68931941e76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishesAmount: 9
+  fishPrefabs:
+  - {fileID: 4901951549789768850, guid: 1651e963beb60c44cadb9d05f7003cfd, type: 3}
 --- !u!1 &706618332
 GameObject:
   m_ObjectHideFlags: 0

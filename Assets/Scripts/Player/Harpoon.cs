@@ -7,30 +7,23 @@ using TMPro;
 public class Harpoon : MonoBehaviour
 {
     [SerializeField]
+    private TextMeshProUGUI scoreText;
+
+    [SerializeField]
     private float returnSpeed;
 
     [SerializeField]
     private Transform startPos;
 
     [SerializeField]
-    private OnGarbageCollecting onGarbageCollecting;
-
-    [SerializeField]
-    private GarbageSpawner garbageSpawner;
+    private string[] garbageTags;
 
     private GameObject item;
     private Rigidbody2D rb;
     private FixedJoint2D fixedJoint;
 
     private bool returning = false;
-    private string[] garbageTags;
-
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        fixedJoint = GetComponent<FixedJoint2D>();
-        garbageTags = garbageSpawner.GetGarbageTags();
-    }
+    private int score = 0;
 
     private void Update()
     {
@@ -41,15 +34,20 @@ public class Harpoon : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        fixedJoint = GetComponent<FixedJoint2D>();
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (Array.Exists(garbageTags, element => element == collision.gameObject.tag) && item == null)
+        if (Array.Exists(garbageTags, element => element == collision.gameObject.tag))
         {
             item = collision.gameObject;
             returning = true;
             fixedJoint.enabled = true;
             fixedJoint.connectedBody = item.GetComponent<Rigidbody2D>();
-            onGarbageCollecting.HandleCollect(item.tag);
         }
         else if (collision.gameObject.name == "Seabed")
         {
@@ -63,6 +61,8 @@ public class Harpoon : MonoBehaviour
         {
             if (item != null)
             {
+                score++;
+                scoreText.SetText($"Score: {score}");
                 Destroy(item);
                 fixedJoint.connectedBody = null;
                 fixedJoint.enabled = false;

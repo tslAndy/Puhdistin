@@ -24,7 +24,7 @@ public class HarpoonThrowing : MonoBehaviour
             Vector3 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 direction = (clickPosition - harpoon.transform.position).normalized;
             harpoonRb.bodyType = RigidbodyType2D.Dynamic;
-            harpoonRb.velocity = direction * speed * Mathf.Sign(transform.localScale.x);
+            harpoonRb.velocity = direction * speed;
             Debug.Log(direction * speed * transform.localScale.x);
         }
     }

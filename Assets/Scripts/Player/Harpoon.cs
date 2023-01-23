@@ -39,6 +39,12 @@ public class Harpoon : MonoBehaviour
             Vector2 direction = (startPos.position - transform.position).normalized;
             rb.velocity = returnSpeed * direction;
         }
+
+        Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
+
+        bool outOfBounds = !Screen.safeArea.Contains(pos);
+        if (outOfBounds) returning = true;
+       
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -51,10 +57,7 @@ public class Harpoon : MonoBehaviour
             fixedJoint.connectedBody = item.GetComponent<Rigidbody2D>();
             onGarbageCollecting.HandleCollect(item.tag);
         }
-        else if (collision.gameObject.name == "Seabed")
-        {
-            returning = true;
-        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

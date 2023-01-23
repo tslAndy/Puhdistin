@@ -37,8 +37,12 @@ public class FishBehaviour : MonoBehaviour
 
     private void ChangeDirection(float direction)
     {
-        if (Mathf.Sign(velocity.x) != direction)
-            velocity *= -1;
+        if (Mathf.Sign(velocity.x) == direction) return;
+
+        velocity *= -1;
+        Vector3 tempScale = transform.localScale;
+        tempScale.x *= -1;
+        transform.localScale = tempScale;
     }
 
     private IEnumerator StartDelay()

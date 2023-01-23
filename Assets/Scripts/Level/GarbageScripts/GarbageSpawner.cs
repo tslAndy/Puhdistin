@@ -1,17 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using Random = UnityEngine.Random;
 
 public class GarbageSpawner : MonoBehaviour
 {
-    [SerializeField]
-    private Collider2D spawnZone;
+    public Collider2D spawnZone;
 
     [SerializeField]
     private int amount;
 
     [SerializeField]
-    private GameObject[] garbages;
+    private GameObject[] garbagePrefabs;
+
+    [NonSerialized]
+    public int spawnedAmount;
 
     private void Start()
     {
@@ -32,8 +36,8 @@ public class GarbageSpawner : MonoBehaviour
         {
             for (float y = startY; y < startY + height; y += yStep)
             {
-                int randIndex = (int) Random.Range(0, garbages.Length);
-                GameObject spawned = Instantiate(garbages[randIndex], transform);
+                int randIndex = (int) Random.Range(0, garbagePrefabs.Length);
+                GameObject spawned = Instantiate(garbagePrefabs[randIndex], transform);
 
                 float xRadius = spawned.GetComponent<Collider2D>().bounds.size.x / 2;
                 float minX = x + xRadius;
@@ -46,7 +50,18 @@ public class GarbageSpawner : MonoBehaviour
                 if (maxY > startY + height) maxY = startY + height - yRadius;
 
                 spawned.transform.position = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), spawned.transform.position.z);
+                spawnedAmount++;
             }
         }
+    }
+
+    public string[] GetGarbageTags()
+    {
+        string[] garbageTags = new string[garbagePrefabs.Length];
+
+        for (int i = 0; i < garbagePrefabs.Length; i++)
+            garbageTags[i] = garbagePrefabs[i].tag;
+        
+        return garbageTags;
     }
 }

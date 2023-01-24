@@ -18,10 +18,9 @@ TagManager:
   - UI
   - Garbage
   - 
-  - 
+  - Particles
   - Post processing
   - Harpoon
-  - 
   - 
   - 
   - 
@@ -57,4 +56,7 @@ TagManager:
     locked: 0
   - name: Alive
     uniqueID: 2664222983
+    locked: 0
+  - name: Particles
+    uniqueID: 2777533581
     locked: 0

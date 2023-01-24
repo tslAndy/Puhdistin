@@ -13,7 +13,7 @@ public class QuoteReader : MonoBehaviour
     StreamReader reader;
     void Start()
     {
-        InvokeRepeating("ShowQuote", 0.5f, delayBetweenQuotes);
+        InvokeRepeating("ShowQuote", 5f, delayBetweenQuotes);
         reader = new StreamReader(Application.dataPath + "/Quotes/MainMenuQuotes.txt");
     }
 

@@ -26,8 +26,13 @@ public class Harpoon : MonoBehaviour
     private bool returning = false;
     private string[] garbageTags;
 
+    private TrailRenderer harpoonTrail;
+    private GameObject harpoonOnHitEffect;
+
     private void Start()
     {
+        harpoonTrail = GetComponent<TrailRenderer>();
+        harpoonOnHitEffect = GameObject.Find("HarpoonOnHitEffect");
         rb = GetComponent<Rigidbody2D>();
         fixedJoint = GetComponent<FixedJoint2D>();
         garbageTags = garbageSpawner.GetGarbageTags();
@@ -36,13 +41,14 @@ public class Harpoon : MonoBehaviour
 
     private void Update()
     {
+
         if (returning)
         {
             if (item != null)
                 collider.enabled = false;
 
             Vector2 direction = (startPos.position - transform.position).normalized;
-            rb.velocity = returnSpeed * direction;
+            rb.velocity = returnSpeed * direction;           
         }
 
         if (Vector3.Distance(startPos.position, transform.position) < 0.5)
@@ -54,13 +60,23 @@ public class Harpoon : MonoBehaviour
 
         bool outOfBounds = !Screen.safeArea.Contains(pos);
         if (outOfBounds) returning = true;
-       
+
+
+        //if harpoon in the ship, we desabling trail, otherwise enabling
+        if (startPos.position == gameObject.transform.position)
+        {
+            harpoonTrail.enabled = false;
+        } else
+        {
+            harpoonTrail.enabled = true;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (Array.Exists(garbageTags, element => element == collision.gameObject.tag) && item == null)
         {
+            harpoonOnHitEffect.GetComponent<ParticleSystem>().Play();
             item = collision.gameObject;
             returning = true;
             fixedJoint.enabled = true;

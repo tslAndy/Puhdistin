@@ -13,6 +13,7 @@ public class OnGarbageCollecting : MonoBehaviour
     public int score = 0;
     private FactsSystem factsSystem;
 
+
     private void Start()
     {
         factsSystem = GetComponent<FactsSystem>();

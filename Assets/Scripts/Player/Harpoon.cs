@@ -74,13 +74,20 @@ public class Harpoon : MonoBehaviour
     {
         if (Array.Exists(garbageTags, element => element == collision.gameObject.tag) && item == null)
         {
-            harpoonOnHitEffect.GetComponent<ParticleSystem>().Play();
+
+            PlayHarpoonAnimation(collision);
             item = collision.gameObject;
             returning = true;
             fixedJoint.enabled = true;
             fixedJoint.connectedBody = item.GetComponent<Rigidbody2D>();
             onGarbageCollecting.HandleCollect(item.tag);
         }
+    }
+
+    private void PlayHarpoonAnimation(Collision2D collision)
+    {
+        Destroy(collision.gameObject.GetComponent<ParticleSystem>());
+        harpoonOnHitEffect.GetComponent<ParticleSystem>().Play();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -47,7 +47,9 @@ public class Harpoon : MonoBehaviour
                 collider.enabled = false;
 
             Vector2 direction = (startPos.position - transform.position).normalized;
-            rb.velocity = returnSpeed * direction;           
+            rb.velocity = returnSpeed * direction;
+            if (item != null)
+                item.GetComponent<Rigidbody2D>().velocity = rb.velocity;
         }
 
         if (Vector3.Distance(startPos.position, transform.position) < 0.5)

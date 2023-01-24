@@ -41,6 +41,7 @@ TagManager:
   - 
   - 
   - 
+  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
@@ -54,7 +55,7 @@ TagManager:
   - name: Waves
     uniqueID: 684776115
     locked: 0
-  - name: Alive
+  - name: Seabed
     uniqueID: 2664222983
     locked: 0
   - name: Particles

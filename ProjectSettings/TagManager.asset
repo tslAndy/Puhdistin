@@ -40,6 +40,7 @@ TagManager:
   - 
   - 
   - 
+  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
@@ -50,8 +51,11 @@ TagManager:
   - name: Garbage
     uniqueID: 53254803
     locked: 0
-  - name: Waves
+  - name: WavesAndHarpoonRope
     uniqueID: 684776115
+    locked: 0
+  - name: Fishes
+    uniqueID: 3898318059
     locked: 0
   - name: Particles
     uniqueID: 2777533581

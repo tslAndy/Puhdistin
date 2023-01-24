@@ -41,7 +41,6 @@ public class Harpoon : MonoBehaviour
 
     private void Update()
     {
-
         if (returning)
         {
             if (item != null)

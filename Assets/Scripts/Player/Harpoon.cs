@@ -71,6 +71,14 @@ public class Harpoon : MonoBehaviour
         {
             harpoonTrail.enabled = true;
         }
+
+        if (Input.GetMouseButton(1))
+        {
+            returning = true;
+        } else if(!outOfBounds)
+        {
+            returning = false;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -80,7 +88,6 @@ public class Harpoon : MonoBehaviour
 
             PlayHarpoonAnimation(collision);
             item = collision.gameObject;
-            returning = true;
             fixedJoint.enabled = true;
             fixedJoint.connectedBody = item.GetComponent<Rigidbody2D>();
             onGarbageCollecting.HandleCollect(item.tag);

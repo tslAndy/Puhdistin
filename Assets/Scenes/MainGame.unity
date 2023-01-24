@@ -689,8 +689,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 187635baab96910439e7ae489b98a763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 23
-  dSin: 0
+  speed: 4
+  dSin: 1
 --- !u!1 &449787639
 GameObject:
   m_ObjectHideFlags: 0
@@ -5847,12 +5847,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnZone: {fileID: 693538703}
-  amount: 20
+  amount: 12
   garbagePrefabs:
   - {fileID: 1371790135330160996, guid: 33b07a18019be3f4b923cdb13a8780b5, type: 3}
-  - {fileID: 5299619957651809, guid: 147b9d8560b2f6d4387bf338b65af733, type: 3}
-  - {fileID: 8721974420747241968, guid: 6c44ed4826d15e34aaf38fbf4e563a14, type: 3}
-  - {fileID: 6318914907777667928, guid: 672f9b9f797a7494eae0a459652610df, type: 3}
 --- !u!114 &693538705
 MonoBehaviour:
   m_ObjectHideFlags: 0

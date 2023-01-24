@@ -59,6 +59,7 @@ TagManager:
     uniqueID: 3898318059
     locked: 0
   - name: Alive
+  - name: Seabed
     uniqueID: 2664222983
     locked: 0
   - name: Particles

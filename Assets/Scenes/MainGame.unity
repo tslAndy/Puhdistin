@@ -352,6 +352,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5640862638670086910, guid: b993fad60266b3d4cbf6d2a1020f604c, type: 3}
+      propertyPath: m_Time
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640862638670086910, guid: b993fad60266b3d4cbf6d2a1020f604c, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -6285,6 +6289,77 @@ MonoBehaviour:
   ropeSegLen: 0.01
   segmentLength: 50
   lineWidth: 0.1
+--- !u!1001 &923778790
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2600372894494589661, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -566.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600372894494589661, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -243.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.387147
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0045138
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.273552
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179571, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_Name
+      value: LevelChanger
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761043016393751337, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -268
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
 --- !u!1 &1154105953
 GameObject:
   m_ObjectHideFlags: 0
@@ -6489,7 +6564,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &1311239988
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -11681,8 +11756,6 @@ MonoBehaviour:
     speed: 2
   - image: {fileID: 1371326831}
     speed: 3
-  - image: {fileID: 1963520520}
-    speed: 3
 --- !u!1 &1518817226
 GameObject:
   m_ObjectHideFlags: 0
@@ -12132,7 +12205,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!1 &2024175324
 GameObject:

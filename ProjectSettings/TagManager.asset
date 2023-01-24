@@ -8,6 +8,7 @@ TagManager:
   - Cartoon
   - Glass
   - Metall
+  - Branch
   layers:
   - Default
   - TransparentFX
@@ -53,4 +54,7 @@ TagManager:
     locked: 0
   - name: Waves
     uniqueID: 684776115
+    locked: 0
+  - name: Alive
+    uniqueID: 2664222983
     locked: 0

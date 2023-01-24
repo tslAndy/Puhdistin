@@ -38,7 +38,9 @@ public class Harpoon : MonoBehaviour
     {
         if (returning)
         {
-            collider.enabled = false;
+            if (item != null)
+                collider.enabled = false;
+
             Vector2 direction = (startPos.position - transform.position).normalized;
             rb.velocity = returnSpeed * direction;
         }

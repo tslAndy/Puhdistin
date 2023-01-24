@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b1fe39e24522a14ba25a937966c2a38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  returningLayer: 
   returnSpeed: 10
   startPos: {fileID: 0}
   onGarbageCollecting: {fileID: 0}

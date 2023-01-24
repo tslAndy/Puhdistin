@@ -7,6 +7,10 @@ using TMPro;
 public class Harpoon : MonoBehaviour
 {
     [SerializeField]
+    private string returningLayer;
+
+
+    [SerializeField]
     private float returnSpeed;
 
     [SerializeField]
@@ -21,13 +25,14 @@ public class Harpoon : MonoBehaviour
     private GameObject item;
     private Rigidbody2D rb;
     private FixedJoint2D fixedJoint;
-    private Collider2D collider;
 
     private bool returning = false;
     private string[] garbageTags;
 
     private TrailRenderer harpoonTrail;
     private GameObject harpoonOnHitEffect;
+
+    private string defaultLayer;
 
     private void Start()
     {
@@ -36,7 +41,7 @@ public class Harpoon : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         fixedJoint = GetComponent<FixedJoint2D>();
         garbageTags = garbageSpawner.GetGarbageTags();
-        collider = GetComponent<Collider2D>();
+        defaultLayer = LayerMask.LayerToName(gameObject.layer);
     }
 
     private void Update()
@@ -44,17 +49,18 @@ public class Harpoon : MonoBehaviour
         if (returning)
         {
             if (item != null)
-                collider.enabled = false;
+            {
+                gameObject.layer = LayerMask.NameToLayer(returningLayer);
+                item.layer = LayerMask.NameToLayer(returningLayer);
+            }
 
             Vector2 direction = (startPos.position - transform.position).normalized;
             rb.velocity = returnSpeed * direction;
-            if (item != null)
-                item.GetComponent<Rigidbody2D>().velocity = rb.velocity;
         }
 
-        if (Vector3.Distance(startPos.position, transform.position) < 0.5)
+        if (Vector3.Distance(startPos.position, transform.position) < 0.5 && item != null)
         {
-            collider.enabled = true ;
+            gameObject.layer = LayerMask.NameToLayer(defaultLayer);
         }
 
         Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);

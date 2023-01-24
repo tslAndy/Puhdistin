@@ -25,8 +25,11 @@ public class Harpoon : MonoBehaviour
     private bool returning = false;
     private string[] garbageTags;
 
+    private GameObject harpoonOnHitEffect;
+
     private void Start()
     {
+        harpoonOnHitEffect = GameObject.Find("HarpoonOnHitEffect");
         rb = GetComponent<Rigidbody2D>();
         fixedJoint = GetComponent<FixedJoint2D>();
         garbageTags = garbageSpawner.GetGarbageTags();
@@ -51,6 +54,7 @@ public class Harpoon : MonoBehaviour
     {
         if (Array.Exists(garbageTags, element => element == collision.gameObject.tag) && item == null)
         {
+            harpoonOnHitEffect.GetComponent<ParticleSystem>().Play();
             item = collision.gameObject;
             returning = true;
             fixedJoint.enabled = true;

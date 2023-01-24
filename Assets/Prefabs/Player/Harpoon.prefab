@@ -127,7 +127,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!255 &7812527039658468697
 FixedJoint2D:
@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b1fe39e24522a14ba25a937966c2a38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  returningLayer: 
   returnSpeed: 10
   startPos: {fileID: 0}
   onGarbageCollecting: {fileID: 0}

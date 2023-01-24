@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6391173716575900400}
   - component: {fileID: 6391173716575900401}
   - component: {fileID: 6391173716575900402}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: Wood
   m_TagString: Untagged
   m_Icon: {fileID: 0}

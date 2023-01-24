@@ -8,6 +8,7 @@ TagManager:
   - Cartoon
   - Glass
   - Metall
+  - Branch
   layers:
   - Default
   - TransparentFX
@@ -56,6 +57,9 @@ TagManager:
     locked: 0
   - name: Fishes
     uniqueID: 3898318059
+    locked: 0
+  - name: Alive
+    uniqueID: 2664222983
     locked: 0
   - name: Particles
     uniqueID: 2777533581

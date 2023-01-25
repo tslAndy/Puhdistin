@@ -84,6 +84,7 @@ public class Harpoon : MonoBehaviour
         if (startPos.position == gameObject.transform.position)
         {
             harpoonTrail.enabled = false;
+            gameObject.transform.position = startPos.position;
         } else
         {
             harpoonTrail.enabled = true;

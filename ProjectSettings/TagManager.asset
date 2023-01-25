@@ -49,14 +49,14 @@ TagManager:
   - name: Background
     uniqueID: 362950213
     locked: 0
+  - name: Seabed
+    uniqueID: 2664222983
+    locked: 0
   - name: Garbage
     uniqueID: 53254803
     locked: 0
   - name: Waves
     uniqueID: 684776115
-    locked: 0
-  - name: Seabed
-    uniqueID: 2664222983
     locked: 0
   - name: Particles
     uniqueID: 2777533581

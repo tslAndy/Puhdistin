@@ -75,9 +75,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 53254803
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2059226781, guid: 22539548dd38a9249ae039d2066c6727, type: 3}
+  m_Sprite: {fileID: -1556348060, guid: 76b59c805aaf61c4bba8521302c613be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -105,7 +105,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.31, y: 0.37}
+    oldSize: {x: 0.96000004, y: 0.64}
     newSize: {x: 0.31, y: 0.37}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4960,7 +4960,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1517433715
-  m_SortingLayer: 5
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0

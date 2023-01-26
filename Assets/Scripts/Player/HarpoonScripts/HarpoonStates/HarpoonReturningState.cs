@@ -70,7 +70,12 @@ public class HarpoonReturningState : HarpoonBaseState
 
     public override void OnCollisionEnterState(HarpoonStateManager stateManager, Collision2D collision)
     { 
-    
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Garbage") && stateManager.garbage == null)
+        {
+            Debug.Log("Trigger");
+            stateManager.throwedState.OnCollisionEnterState(stateManager, collision);
+            stateManager.SwitchState(stateManager.throwedState);
+        }
     }
     public override void OnTriggerEnterState(HarpoonStateManager stateManager, Collider2D collision)
     {
@@ -82,7 +87,6 @@ public class HarpoonReturningState : HarpoonBaseState
                 stateManager.fixedJoint.connectedBody = null;
                 stateManager.fixedJoint.enabled = false;
             }
-            Debug.Log("Trigger");
             stateManager.harpoon.transform.position = stateManager.harpoonStartPoint.transform.position;
             stateManager.harpoonRb.bodyType = RigidbodyType2D.Static;
             stateManager.SwitchState(stateManager.inShipState);

@@ -560,6 +560,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 693538704}
     - target: {fileID: 8961322645776950899, guid: b993fad60266b3d4cbf6d2a1020f604c, type: 3}
+      propertyPath: returningLayer
+      value: Returning
+      objectReference: {fileID: 0}
+    - target: {fileID: 8961322645776950899, guid: b993fad60266b3d4cbf6d2a1020f604c, type: 3}
+      propertyPath: collisionOffset
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8961322645776950899, guid: b993fad60266b3d4cbf6d2a1020f604c, type: 3}
       propertyPath: harpoonStartPoint
       value: 
       objectReference: {fileID: 1915078486}
@@ -567,6 +575,14 @@ PrefabInstance:
       propertyPath: onGarbageCollecting
       value: 
       objectReference: {fileID: 693538706}
+    - target: {fileID: 8961322645776950899, guid: b993fad60266b3d4cbf6d2a1020f604c, type: 3}
+      propertyPath: movmentFilter.useLayerMask
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8961322645776950899, guid: b993fad60266b3d4cbf6d2a1020f604c, type: 3}
+      propertyPath: movmentFilter.layerMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b993fad60266b3d4cbf6d2a1020f604c, type: 3}
@@ -14068,7 +14084,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1915078487}
   - component: {fileID: 1915078488}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: HarpoonStart
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}

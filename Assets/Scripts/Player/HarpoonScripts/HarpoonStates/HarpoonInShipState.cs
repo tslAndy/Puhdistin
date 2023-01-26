@@ -11,6 +11,8 @@ public class HarpoonInShipState : HarpoonBaseState
     public override void EnterState(HarpoonStateManager stateManager)
     {
         this.stateManager = stateManager;
+
+        stateManager.harpoon.layer = LayerMask.NameToLayer(stateManager.defaultLayer);
     }
 
     public override void UpdateState(HarpoonStateManager stateManager)

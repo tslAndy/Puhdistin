@@ -10,7 +10,12 @@ public class HarpoonReturningState : HarpoonBaseState
         this.stateManager = stateManager;
     }
     public override void UpdateState(HarpoonStateManager stateManager)
-    {      
+    {
+        if (Vector3.Distance(stateManager.harpoonStartPoint.transform.position, stateManager.harpoon.transform.position) < 0.5 && stateManager.garbage != null)
+        {
+            stateManager.harpoon.layer = LayerMask.NameToLayer(stateManager.defaultLayer);
+        }
+
         if (stateManager.garbage != null)
         {
             stateManager.harpoon.layer = LayerMask.NameToLayer(stateManager.returningLayer);
@@ -64,10 +69,11 @@ public class HarpoonReturningState : HarpoonBaseState
 
 
     public override void OnCollisionEnterState(HarpoonStateManager stateManager, Collision2D collision)
-    { }
+    { 
+    
+    }
     public override void OnTriggerEnterState(HarpoonStateManager stateManager, Collider2D collision)
     {
-        Debug.Log("Trigger");
         if (collision.gameObject.name == "HarpoonStart")
         {
             if (stateManager.garbage != null)
@@ -76,6 +82,7 @@ public class HarpoonReturningState : HarpoonBaseState
                 stateManager.fixedJoint.connectedBody = null;
                 stateManager.fixedJoint.enabled = false;
             }
+            Debug.Log("Trigger");
             stateManager.harpoon.transform.position = stateManager.harpoonStartPoint.transform.position;
             stateManager.harpoonRb.bodyType = RigidbodyType2D.Static;
             stateManager.SwitchState(stateManager.inShipState);

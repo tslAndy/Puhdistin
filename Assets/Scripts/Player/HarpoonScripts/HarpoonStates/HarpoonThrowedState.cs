@@ -13,10 +13,7 @@ public class HarpoonThrowedState : HarpoonBaseState
 
     public override void UpdateState(HarpoonStateManager stateManager)
     {
-        if (Vector3.Distance(stateManager.harpoonStartPoint.transform.position, stateManager.harpoon.transform.position) < 0.5 && stateManager.garbage != null)
-        {
-            stateManager.harpoon.layer = LayerMask.NameToLayer(stateManager.defaultLayer);
-        }
+
 
         Vector3 pos = Camera.main.WorldToScreenPoint(stateManager.harpoon.transform.position);
 

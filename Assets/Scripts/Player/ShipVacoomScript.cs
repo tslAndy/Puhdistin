@@ -25,7 +25,6 @@ public class ShipVacoomScript : MonoBehaviour
 
     private List<Collider2D> colliders = new List<Collider2D>();
 
-    private int defaultLayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,28 +42,13 @@ public class ShipVacoomScript : MonoBehaviour
         {
             DeactivateAreaEffector();
         }
-
-        foreach (Collider2D collider in colliders)
-        {
-            if (collider.gameObject.transform.position.y < minY && collider.gameObject.layer == LayerMask.NameToLayer("Garbage"))
-            {
-                collider.GetComponent<Rigidbody2D>().gravityScale = 0;
-                collider.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            }
-        }
     }
 
     private void ActivateAreaEffector()
     {
         areaEffector.enabled = true;
         foreach(Collider2D collider in colliders)
-        {
-            if (collider.gameObject.layer == LayerMask.NameToLayer("Garbage"))
-            {
-                defaultLayer = collider.gameObject.layer;
-                collider.gameObject.layer = LayerMask.NameToLayer("Returning");
-                collider.GetComponent<Rigidbody2D>().gravityScale = 0.2f;
-            }
+        {          
             if (collider.gameObject.transform.position.y > maxY)
             {
                 onGarbageCollecting.HandleCollect(collider.gameObject.tag);
@@ -75,13 +59,6 @@ public class ShipVacoomScript : MonoBehaviour
     }
     private void DeactivateAreaEffector()
     {
-        foreach (Collider2D collider in colliders)
-        {
-            if(defaultLayer == LayerMask.NameToLayer("Garbage"))
-            {
-            collider.gameObject.layer = LayerMask.NameToLayer("Garbage");
-            }
-        }
         areaEffector.enabled = false;
     }
 

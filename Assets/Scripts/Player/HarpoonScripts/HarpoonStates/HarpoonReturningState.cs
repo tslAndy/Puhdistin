@@ -67,7 +67,7 @@ public class HarpoonReturningState : HarpoonBaseState
         }
     }
 
-
+    //Attaches garbage to harpoon
     public override void OnCollisionEnterState(HarpoonStateManager stateManager, Collision2D collision)
     { 
         if(collision.gameObject.layer == LayerMask.NameToLayer("Garbage") && stateManager.garbage == null)
@@ -77,6 +77,8 @@ public class HarpoonReturningState : HarpoonBaseState
             stateManager.SwitchState(stateManager.throwedState);
         }
     }
+
+    //Checks is it a start harpoon point
     public override void OnTriggerEnterState(HarpoonStateManager stateManager, Collider2D collision)
     {
         if (collision.gameObject.name == "HarpoonStart")

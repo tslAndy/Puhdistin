@@ -46,6 +46,7 @@ public class ShipVacoomScript : MonoBehaviour
 
     private void ActivateAreaEffector()
     {
+        Debug.Log("Activated");
         areaEffector.enabled = true;
         foreach(Collider2D collider in colliders)
         {          

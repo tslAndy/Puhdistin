@@ -17,6 +17,7 @@ public class GarbageSpawner : MonoBehaviour
     [NonSerialized]
     public int spawnedAmount;
 
+
     private void Start()
     {
         float startX = spawnZone.bounds.min.x;
@@ -48,13 +49,26 @@ public class GarbageSpawner : MonoBehaviour
                 float minY = y + yRadius;
                 float maxY = y + yStep - yRadius;
                 if (maxY > startY + height) maxY = startY + height - yRadius;
+                
+                Vector2 position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
 
-                spawned.transform.position = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), spawned.transform.position.z);
+
+
+
+                spawned.transform.position = position;
+                StartCoroutine(DelayedDisabling(spawned));
+
                 spawnedAmount++;
             }
         }
     }
 
+    IEnumerator DelayedDisabling(GameObject spawned)
+    {
+        yield return new WaitForSeconds(1f);
+        spawned.GetComponent<CapsuleCollider2D>().enabled = false;
+        Destroy(spawned.GetComponent<Rigidbody2D>());
+    }
     public string[] GetGarbageTags()
     {
         string[] garbageTags = new string[garbagePrefabs.Length];

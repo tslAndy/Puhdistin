@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 8034870805412599673}
   - component: {fileID: 1681612519135018930}
   - component: {fileID: 6324685222072165293}
-  - component: {fileID: 7812527039658468697}
   - component: {fileID: 1388029717437294725}
   - component: {fileID: 2748813713487496643}
   - component: {fileID: 5640862638670086910}
@@ -213,24 +212,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!255 &7812527039658468697
-FixedJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4440854173501011522}
-  m_Enabled: 0
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_DampingRatio: 0
-  m_Frequency: 0
 --- !u!198 &1388029717437294725
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -5163,7 +5144,6 @@ MonoBehaviour:
   garbageTags: []
   harpoonOnHitEffect: {fileID: 0}
   harpoonTrail: {fileID: 0}
-  fixedJoint: {fileID: 0}
   defaultLayer: 
 --- !u!1001 &5983161576181262476
 PrefabInstance:

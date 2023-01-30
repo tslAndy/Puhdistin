@@ -42,9 +42,6 @@ public class HarpoonStateManager : MonoBehaviour
     public TrailRenderer harpoonTrail;
 
     [HideInInspector]
-    public FixedJoint2D fixedJoint;
-
-    [HideInInspector]
     public string defaultLayer;
 
     private HarpoonBaseState currentState;
@@ -55,7 +52,6 @@ public class HarpoonStateManager : MonoBehaviour
     {
         //Assigning values before states
         harpoonRb = harpoon.GetComponent<Rigidbody2D>();
-        fixedJoint = harpoon.GetComponent<FixedJoint2D>();
         harpoonOnHitEffect = harpoon.GetComponent<ParticleSystem>();
         harpoonTrail = harpoon.GetComponent<TrailRenderer>();
         garbageTags = garbageSpawner.GetGarbageTags();

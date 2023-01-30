@@ -40,7 +40,7 @@ public class HarpoonThrowedState : HarpoonBaseState
     }
 
 
-    private void PlayHarpoonAnimation(Collision2D collision)
+    private void PlayHarpoonAnimation(Collider2D collision)
     {
         GameObject.Destroy(collision.gameObject.GetComponent<ParticleSystem>());
         stateManager.harpoonOnHitEffect.Play();
@@ -48,19 +48,16 @@ public class HarpoonThrowedState : HarpoonBaseState
 
     public override void OnCollisionEnterState(HarpoonStateManager stateManager, Collision2D collision)
     {
-        if (Array.Exists(stateManager.garbageTags, element => element == collision.gameObject.tag) && stateManager.garbage == null)
-        {
-
-            PlayHarpoonAnimation(collision);
-            stateManager.garbage = collision.gameObject;
-            stateManager.fixedJoint.enabled = true;
-            stateManager.fixedJoint.connectedBody = stateManager.garbage.GetComponent<Rigidbody2D>();
-            stateManager.onGarbageCollecting.HandleCollect(stateManager.garbage.tag);
-        }
     }
 
     public override void OnTriggerEnterState(HarpoonStateManager stateManager, Collider2D collision)
     {
-
+        if (Array.Exists(stateManager.garbageTags, element => element == collision.gameObject.tag) && stateManager.garbage == null)
+        {
+            PlayHarpoonAnimation(collision);
+            stateManager.garbage = collision.gameObject;
+            stateManager.garbage.transform.SetParent(stateManager.harpoon.transform);
+            stateManager.onGarbageCollecting.HandleCollect(stateManager.garbage.tag);
+        }
     }
 }

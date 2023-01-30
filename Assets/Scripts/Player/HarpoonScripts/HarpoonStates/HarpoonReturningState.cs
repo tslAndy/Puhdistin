@@ -20,6 +20,9 @@ public class HarpoonReturningState : HarpoonBaseState
         {
             stateManager.harpoon.layer = LayerMask.NameToLayer(stateManager.returningLayer);
             stateManager.garbage.layer = LayerMask.NameToLayer(stateManager.returningLayer);
+        } else
+        {
+            stateManager.harpoon.layer = LayerMask.NameToLayer(stateManager.returningLayer);
         }
         Vector2 direction = (stateManager.harpoonStartPoint.transform.position - stateManager.harpoon.transform.position).normalized;
 

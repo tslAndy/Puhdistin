@@ -4,33 +4,28 @@ using UnityEngine;
 using System;
 using Random = UnityEngine.Random;
 
-public class GarbageSpawner : ItemSpawner
+public class ItemSpawner : MonoBehaviour
 {
+    public Collider2D spawnZone;
 
     [SerializeField]
     private int amount;
 
     [SerializeField]
-    private GameObject[] garbagePrefabs;
+    private GameObject[] itemsPrefabs;
 
     [NonSerialized]
     public int spawnedAmount;
 
-    private float startX;
-    private float startY;
-
-    private float width;
-    private float height;
+    private float startX, startY;
+    private float width, height;
 
     private float ratio;
-    private float ySteps;
-    private float xSteps;
+    private float ySteps, xSteps;
 
-    private float xStep;
-    private float yStep;
+    private float xStep, yStep;
 
-    private List<GameObject> garbages = new List<GameObject>();
-
+    private List<GameObject> items = new List<GameObject>();
 
     private void Start()
     {
@@ -47,7 +42,7 @@ public class GarbageSpawner : ItemSpawner
         xStep = width / xSteps;
         yStep = height / ySteps;
 
-        InvokeRepeating("SpawnGarbage", 0f, 4f);
+        InvokeRepeating("SpawnItems", 0f, 4f);
     }
 
     IEnumerator DelayedDisabling(GameObject spawned)
@@ -56,24 +51,25 @@ public class GarbageSpawner : ItemSpawner
         spawned.GetComponent<CapsuleCollider2D>().enabled = false;
         Destroy(spawned.GetComponent<Rigidbody2D>());
     }
-    public string[] GetGarbageTags()
-    {
-        string[] garbageTags = new string[garbagePrefabs.Length];
 
-        for (int i = 0; i < garbagePrefabs.Length; i++)
-            garbageTags[i] = garbagePrefabs[i].tag;
-        
-        return garbageTags;
+    public string[] GetItemsTags()
+    {
+        string[] itemsTags = new string[itemsPrefabs.Length];
+
+        for (int i = 0; i < itemsPrefabs.Length; i++)
+            itemsTags[i] = itemsPrefabs[i].tag;
+
+        return itemsTags;
     }
 
-    private void SpawnGarbage()
+    private void SpawnItems()
     {
         for (float x = startX; x < startX + width; x += xStep)
         {
             for (float y = startY; y < startY + height; y += yStep)
             {
-                int randIndex = (int)Random.Range(0, garbagePrefabs.Length);
-                GameObject spawned = Instantiate(garbagePrefabs[randIndex], transform);
+                int randIndex = (int)Random.Range(0, itemsPrefabs.Length);
+                GameObject spawned = Instantiate(itemsPrefabs[randIndex], transform);
                 spawned.transform.parent = null;
 
                 float xRadius = spawned.GetComponent<Collider2D>().bounds.size.x / 2;
@@ -88,11 +84,8 @@ public class GarbageSpawner : ItemSpawner
 
                 Vector2 position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
 
-
-
-
                 spawned.transform.position = position;
-                garbages.Add(spawned);
+                items.Add(spawned);
                 ObstaclesMoverScript.AddObstacle(spawned);
                 StartCoroutine(DelayedDisabling(spawned));
 
@@ -101,19 +94,13 @@ public class GarbageSpawner : ItemSpawner
         }
     }
 
-    private void FixedUpdate()
-    {
-        ClearGarbage();
-    }
+    private void FixedUpdate() => ClearGarbage();
 
     private void ClearGarbage()
     {
-        foreach (GameObject item in garbages)
+        foreach (GameObject item in items)
         {
-            if(item == null)
-            {
-                
-            } else if (item.transform.position.x < -14f)
+            if (item != null && item.transform.position.x < -14f)
             {
                 ObstaclesMoverScript.RemoveObstacle(item);
                 Destroy(item);

@@ -9,6 +9,7 @@ TagManager:
   - Glass
   - Metall
   - Branch
+  - Harpoon
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Water
   - UI
   - Garbage
-  - 
+  - SmallGarbage
   - Particles
   - Post processing
   - Returning
@@ -55,8 +56,17 @@ TagManager:
   - name: Garbage
     uniqueID: 53254803
     locked: 0
-  - name: Waves
+  - name: WavesAndHarpoonRope
     uniqueID: 684776115
+    locked: 0
+  - name: Fishes
+    uniqueID: 3898318059
+    locked: 0
+  - name: Alive
+    uniqueID: 1
+    locked: 0
+  - name: Seabed
+    uniqueID: 2664222983
     locked: 0
   - name: Particles
     uniqueID: 2777533581

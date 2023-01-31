@@ -10,17 +10,28 @@ public class Harpoon : MonoBehaviour
     private string returningLayer;
 
 
-    [SerializeField]
-    private float returnSpeed;
 
     [SerializeField]
     private Transform startPos;
 
+    [Header("GarbageScripts")]
     [SerializeField]
     private OnGarbageCollecting onGarbageCollecting;
 
     [SerializeField]
     private GarbageSpawner garbageSpawner;
+
+    [Header("ReturnMovmentThings")]
+    [SerializeField]
+    private ContactFilter2D movmentFilter;
+
+    [SerializeField]
+    private float collisionOffset;
+    
+    [SerializeField]
+    private float returnSpeed;
+
+    private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
     private GameObject item;
     private Rigidbody2D rb;
@@ -53,9 +64,9 @@ public class Harpoon : MonoBehaviour
                 gameObject.layer = LayerMask.NameToLayer(returningLayer);
                 item.layer = LayerMask.NameToLayer(returningLayer);
             }
-
             Vector2 direction = (startPos.position - transform.position).normalized;
-            rb.velocity = returnSpeed * direction;
+
+            ReturnHarpoon(direction);
         }
 
         if (Vector3.Distance(startPos.position, transform.position) < 0.5 && item != null)
@@ -73,9 +84,18 @@ public class Harpoon : MonoBehaviour
         if (startPos.position == gameObject.transform.position)
         {
             harpoonTrail.enabled = false;
+            gameObject.transform.position = startPos.position;
         } else
         {
             harpoonTrail.enabled = true;
+        }
+
+        if (Input.GetMouseButton(1))
+        {
+            returning = true;
+        } else if(!outOfBounds)
+        {
+            returning = false;
         }
     }
 
@@ -83,13 +103,55 @@ public class Harpoon : MonoBehaviour
     {
         if (Array.Exists(garbageTags, element => element == collision.gameObject.tag) && item == null)
         {
-            harpoonOnHitEffect.GetComponent<ParticleSystem>().Play();
+
+            PlayHarpoonAnimation(collision);
             item = collision.gameObject;
-            returning = true;
             fixedJoint.enabled = true;
             fixedJoint.connectedBody = item.GetComponent<Rigidbody2D>();
-            onGarbageCollecting.HandleCollect(item.tag);
+            //onGarbageCollecting.HandleCollect(item.tag);
         }
+    }
+
+    private void ReturnHarpoon(Vector2 direction)
+    {
+        bool success = MoveHarpoon(direction);
+        if (!success)
+        {
+            //Trying to move harpoon in right / left
+            success = MoveHarpoon(new Vector2(direction.x, 0));
+            if (!success)
+            {
+                success = MoveHarpoon(new Vector2(0, direction.y));
+            }
+        }
+    }
+    
+    //Moving harpoon in concrete direction
+    private bool MoveHarpoon(Vector2 direction)
+    {       
+
+        int count = rb.Cast(
+            direction,
+            movmentFilter,
+            castCollisions,
+            returnSpeed * Time.deltaTime + collisionOffset
+        );
+
+        if (count == 0 || count == 1)
+        {
+            rb.velocity = returnSpeed * direction;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    private void PlayHarpoonAnimation(Collision2D collision)
+    {
+        Destroy(collision.gameObject.GetComponent<ParticleSystem>());
+        harpoonOnHitEffect.GetComponent<ParticleSystem>().Play();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

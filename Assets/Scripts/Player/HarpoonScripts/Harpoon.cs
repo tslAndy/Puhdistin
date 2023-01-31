@@ -108,7 +108,7 @@ public class Harpoon : MonoBehaviour
             item = collision.gameObject;
             fixedJoint.enabled = true;
             fixedJoint.connectedBody = item.GetComponent<Rigidbody2D>();
-            onGarbageCollecting.HandleCollect(item.tag);
+            //onGarbageCollecting.HandleCollect(item.tag);
         }
     }
 

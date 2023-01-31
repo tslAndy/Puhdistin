@@ -19,12 +19,14 @@ public class OnGarbageCollecting : MonoBehaviour
         factsSystem = GetComponent<FactsSystem>();
     }
 
-    public void HandleCollect(string tag)
+    //Printing facts, adding poits, and deleiting garbage from moving list
+    public void HandleCollect(string tag, GameObject garbage)
     {
         score++;
         scoreText.SetText($"Score: {score}");
         string fact = factsSystem.GetRandomFact(tag);
         Debug.Log(fact);
         factText.SetText(fact);
+        ObstaclesMoverScript.RemoveObstacle(garbage);
     }
 }

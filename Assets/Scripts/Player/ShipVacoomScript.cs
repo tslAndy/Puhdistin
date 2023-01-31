@@ -42,21 +42,21 @@ public class ShipVacoomScript : MonoBehaviour
         {
             DeactivateAreaEffector();
         }
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.gameObject.transform.position.y > maxY)
+            {
+                onGarbageCollecting.HandleCollect(collider.gameObject.tag, collider.gameObject);
+                Destroy(collider.gameObject);
+            }
+
+        }
     }
 
     private void ActivateAreaEffector()
     {
         Debug.Log("Activated");
-        areaEffector.enabled = true;
-        foreach(Collider2D collider in colliders)
-        {          
-            if (collider.gameObject.transform.position.y > maxY)
-            {
-                onGarbageCollecting.HandleCollect(collider.gameObject.tag);
-                Destroy(collider.gameObject);
-            }
-
-        }
+        areaEffector.enabled = true;       
     }
     private void DeactivateAreaEffector()
     {

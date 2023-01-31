@@ -9,10 +9,6 @@ public class ObstaclesMoverScript : MonoBehaviour
 
     private static List<GameObject> obstacles = new List<GameObject>();
 
-    public static void AddObstacle(GameObject obstacle)
-    {
-        obstacles.Add(obstacle);
-    }
 
     private void Update()
     {
@@ -22,5 +18,14 @@ public class ObstaclesMoverScript : MonoBehaviour
         {
             item.transform.position -= new Vector3(speed * Time.deltaTime, 0);
         }
+    }
+    public static void AddObstacle(GameObject obstacle)
+    {
+        obstacles.Add(obstacle);
+    }
+
+    public static void RemoveObstacle(GameObject obstacle)
+    {
+        obstacles.Remove(obstacle);
     }
 }

@@ -57,7 +57,7 @@ public class HarpoonThrowedState : HarpoonBaseState
             PlayHarpoonAnimation(collision);
             stateManager.garbage = collision.gameObject;
             stateManager.garbage.transform.SetParent(stateManager.harpoon.transform);
-            stateManager.onGarbageCollecting.HandleCollect(stateManager.garbage.tag);
+            ObstaclesMoverScript.RemoveObstacle(stateManager.garbage);
         }
     }
 }

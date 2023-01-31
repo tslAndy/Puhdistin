@@ -90,6 +90,8 @@ public class HarpoonReturningState : HarpoonBaseState
         {
             if (stateManager.garbage != null)
             {
+                //Collecting garbage, destroying it, adiing poits
+                stateManager.onGarbageCollecting.HandleCollect(stateManager.garbage.tag, stateManager.garbage);
                 GameObject.Destroy(stateManager.garbage);
             }
             stateManager.harpoon.transform.position = stateManager.harpoonStartPoint.transform.position;

@@ -30,6 +30,8 @@ public class GarbageSpawner : MonoBehaviour
     private float xStep;
     private float yStep;
 
+    private List<GameObject> garbages = new List<GameObject>();
+
 
     private void Start()
     {
@@ -91,10 +93,31 @@ public class GarbageSpawner : MonoBehaviour
 
 
                 spawned.transform.position = position;
+                garbages.Add(spawned);
                 ObstaclesMoverScript.AddObstacle(spawned);
                 StartCoroutine(DelayedDisabling(spawned));
 
                 spawnedAmount++;
+            }
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        ClearGarbage();
+    }
+
+    private void ClearGarbage()
+    {
+        foreach (GameObject item in garbages)
+        {
+            if(item == null)
+            {
+                
+            } else if (item.transform.position.x < -14f)
+            {
+                ObstaclesMoverScript.RemoveObstacle(item);
+                Destroy(item);
             }
         }
     }

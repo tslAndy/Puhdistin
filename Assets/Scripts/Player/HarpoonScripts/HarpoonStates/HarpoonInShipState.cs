@@ -13,6 +13,7 @@ public class HarpoonInShipState : HarpoonBaseState
         this.stateManager = stateManager;
 
         stateManager.harpoon.layer = LayerMask.NameToLayer(stateManager.defaultLayer);
+        stateManager.harpoon.tag = "Harpoon";
     }
 
     public override void UpdateState(HarpoonStateManager stateManager)

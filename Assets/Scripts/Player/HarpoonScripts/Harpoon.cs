@@ -51,7 +51,7 @@ public class Harpoon : MonoBehaviour
         harpoonOnHitEffect = GameObject.Find("HarpoonOnHitEffect");
         rb = GetComponent<Rigidbody2D>();
         fixedJoint = GetComponent<FixedJoint2D>();
-        garbageTags = garbageSpawner.GetGarbageTags();
+        garbageTags = garbageSpawner.GetItemsTags();
         defaultLayer = LayerMask.LayerToName(gameObject.layer);
     }
 

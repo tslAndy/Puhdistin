@@ -54,7 +54,7 @@ public class HarpoonStateManager : MonoBehaviour
         harpoonRb = harpoon.GetComponent<Rigidbody2D>();
         harpoonOnHitEffect = harpoon.GetComponent<ParticleSystem>();
         harpoonTrail = harpoon.GetComponent<TrailRenderer>();
-        garbageTags = garbageSpawner.GetGarbageTags();
+        garbageTags = garbageSpawner.GetItemsTags();
         defaultLayer = LayerMask.LayerToName(gameObject.layer);
         castCollisions = new List<RaycastHit2D>();
 

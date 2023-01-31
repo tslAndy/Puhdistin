@@ -12,11 +12,12 @@ public class ObstaclesMoverScript : MonoBehaviour
 
     private void Update()
     {
-        Debug.LogWarning(obstacles);
-        Debug.LogWarning(obstacles.Count);
+        // Debug.LogWarning(obstacles);
+        // Debug.LogWarning(obstacles.Count);
         foreach (var item in obstacles)
         {
-            item.transform.position -= new Vector3(speed * Time.deltaTime, 0);
+            if (item != null)
+                item.transform.position -= new Vector3(speed * Time.deltaTime, 0);
         }
     }
     public static void AddObstacle(GameObject obstacle)

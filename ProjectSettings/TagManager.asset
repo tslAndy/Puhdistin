@@ -10,11 +10,12 @@ TagManager:
   - Metall
   - Branch
   - Harpoon
+  - ReturningHarpoon
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ship
   - Water
   - UI
   - Garbage

@@ -26,7 +26,7 @@ public class HarpoonInShipState : HarpoonBaseState
             float angle = Mathf.Atan2(clickPosition.y - stateManager.harpoon.transform.position.y, 
                                       clickPosition.x - stateManager.harpoon.transform.position.x) * Mathf.Rad2Deg;
             angle = Mathf.Clamp(angle, -60, 30);
-            Vector3 direction = Quaternion.AngleAxis(angle, Vector3.forward) * Vector2.right;
+            Vector3 direction = Quaternion.AngleAxis(angle, Vector3.forward) * Vector2.right;  
 
             stateManager.harpoonRb.bodyType = RigidbodyType2D.Dynamic;
             stateManager.harpoonRb.velocity = direction * stateManager.speed;

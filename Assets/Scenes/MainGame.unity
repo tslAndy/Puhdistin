@@ -6580,6 +6580,7 @@ GameObject:
   - component: {fileID: 693538708}
   - component: {fileID: 693538709}
   - component: {fileID: 693538710}
+  - component: {fileID: 693538711}
   m_Layer: 4
   m_Name: Level
   m_TagString: Untagged
@@ -6752,6 +6753,19 @@ MonoBehaviour:
   amount: 10
   itemsPrefabs:
   - {fileID: 1371790135330160996, guid: 0f97335461494454d8931d5214582767, type: 3}
+--- !u!114 &693538711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693538700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6496345a764b5b4c9ea0dc085252a0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crosshair: {fileID: 2800000, guid: a3709f33ba67474488cf5632d971cfc6, type: 3}
 --- !u!1 &704241663
 GameObject:
   m_ObjectHideFlags: 0

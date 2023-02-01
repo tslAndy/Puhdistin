@@ -8,6 +8,7 @@ public class HarpoonReturningState : HarpoonBaseState
     public override void EnterState(HarpoonStateManager stateManager)
     {
         this.stateManager = stateManager;
+        stateManager.harpoon.tag = "ReturningHarpoon";
     }
     public override void UpdateState(HarpoonStateManager stateManager)
     {
@@ -20,11 +21,9 @@ public class HarpoonReturningState : HarpoonBaseState
         {
             stateManager.harpoon.layer = LayerMask.NameToLayer(stateManager.returningLayer);
             stateManager.garbage.layer = LayerMask.NameToLayer(stateManager.returningLayer);
-        } else
-        {
-            stateManager.harpoon.layer = LayerMask.NameToLayer(stateManager.returningLayer);
-        }
+        } 
         Vector2 direction = (stateManager.harpoonStartPoint.transform.position - stateManager.harpoon.transform.position).normalized;
+       
 
         ReturnHarpoon(direction);
 

@@ -17,6 +17,8 @@ public class ItemSpawner : MonoBehaviour
     [NonSerialized]
     public int spawnedAmount;
 
+    protected GameObject spawned;
+
     private float startX, startY;
     private float width, height;
 
@@ -45,10 +47,9 @@ public class ItemSpawner : MonoBehaviour
         InvokeRepeating("SpawnItems", 0f, 4f);
     }
 
-    IEnumerator DelayedDisabling(GameObject spawned)
+    public virtual IEnumerator DelayedDisabling(GameObject spawned)
     {
         yield return new WaitForSeconds(1f);
-        spawned.GetComponent<CapsuleCollider2D>().enabled = false;
         Destroy(spawned.GetComponent<Rigidbody2D>());
     }
 
@@ -62,14 +63,14 @@ public class ItemSpawner : MonoBehaviour
         return itemsTags;
     }
 
-    private void SpawnItems()
+    public virtual void SpawnItems()
     {
         for (float x = startX; x < startX + width; x += xStep)
         {
             for (float y = startY; y < startY + height; y += yStep)
             {
                 int randIndex = (int)Random.Range(0, itemsPrefabs.Length);
-                GameObject spawned = Instantiate(itemsPrefabs[randIndex], transform);
+                spawned = Instantiate(itemsPrefabs[randIndex], transform);
                 spawned.transform.parent = null;
 
                 float xRadius = spawned.GetComponent<Collider2D>().bounds.size.x / 2;

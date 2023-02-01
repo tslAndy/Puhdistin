@@ -41,6 +41,7 @@ public class OldLogScript : MonoBehaviour
     private IEnumerator DelayedDestroy()
     {
         yield return new WaitForSeconds(.5f);
+        ObstaclesMoverScript.RemoveObstacle(gameObject);
         Destroy(gameObject);
     }
 

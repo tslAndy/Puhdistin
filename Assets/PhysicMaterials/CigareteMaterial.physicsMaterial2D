@@ -6,6 +6,6 @@ PhysicsMaterial2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SandMaterial
-  friction: 5.36
-  bounciness: 0.49
+  m_Name: CigareteMaterial
+  friction: 0.98
+  bounciness: 0.09

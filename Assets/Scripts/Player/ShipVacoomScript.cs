@@ -10,6 +10,9 @@ public class ShipVacoomScript : MonoBehaviour
     [SerializeField]
     private PolygonCollider2D collider;
 
+    [SerializeField]
+    private ParticleSystem[] effects;
+
     public OnGarbageCollecting onGarbageCollecting;
 
 
@@ -24,9 +27,17 @@ public class ShipVacoomScript : MonoBehaviour
        if(Input.GetKey(KeyCode.Space))
         {
             ActivateAreaEffector();
+            foreach (var effect in effects)
+            {
+                if(!effect.isPlaying) effect.Play();
+            }
         } else
         {
             DeactivateAreaEffector();
+            foreach (var effect in effects)
+            {
+                if (effect.isPlaying) effect.Stop();
+            }
         }
     }
 
@@ -41,11 +52,11 @@ public class ShipVacoomScript : MonoBehaviour
     private void ActivateAreaEffector()
     {
         Debug.Log("Activated");
-        areaEffector.enabled = true;       
+        areaEffector.enabled = true;
     }
     private void DeactivateAreaEffector()
     {
-        areaEffector.enabled = false;
+        areaEffector.enabled = false;      
     }
 
 }

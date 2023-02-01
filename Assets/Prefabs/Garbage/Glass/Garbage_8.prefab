@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -8256549490755392074}
   - component: {fileID: -2801372288693745813}
   - component: {fileID: -2182726169229270791}
+  - component: {fileID: -4790796022277775815}
   m_Layer: 6
   m_Name: Garbage_8
   m_TagString: Glass
@@ -98,21 +99,21 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.029996395, y: -0.09298884}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.72, y: 2.17}
+    oldSize: {x: 0.28800002, y: 0.86800003}
     newSize: {x: 0.25, y: 0.65}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.65}
+  m_Size: {x: 0.13001439, y: 0.46402228}
   m_EdgeRadius: 0
 --- !u!50 &-8256549490755392074
 Rigidbody2D:
@@ -4992,3 +4993,19 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!70 &-4790796022277775815
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8692573952024895869}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.28800002, y: 0.86800003}
+  m_Direction: 0

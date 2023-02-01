@@ -7,7 +7,19 @@ using TMPro;
 public class OnGarbageCollecting : MonoBehaviour
 {
     [SerializeField]
-    private TextMeshProUGUI scoreText, factText;
+    private TextMeshProUGUI scoreText, factText, scoreEffectText;
+
+    public event Action<int> OnGarbageColldected;
+
+    [SerializeField]
+    private GarbageValue[] garbageValue;
+
+    [Serializable]
+    class GarbageValue
+    {
+        public string tag;
+        public int value;
+    }
 
     [NonSerialized]
     public int score = 0;
@@ -22,11 +34,23 @@ public class OnGarbageCollecting : MonoBehaviour
     //Printing facts, adding poits, and deleiting garbage from moving list
     public void HandleCollect(string tag, GameObject garbage)
     {
-        score++;
+        for (int i = 0; i < garbageValue.Length; i++)
+        {
+            if (tag == garbageValue[i].tag)
+            {
+                score += garbageValue[i].value;
+                OnGarbageColldected?.Invoke(garbageValue[i].value);
+            }
+        }
         scoreText.SetText($"Score: {score}");
         string fact = factsSystem.GetRandomFact(tag);
         Debug.Log(fact);
         factText.SetText(fact);
         ObstaclesMoverScript.RemoveObstacle(garbage);
+    }
+
+    public void DeactivateEffect()
+    {
+        scoreEffectText.enabled = false;
     }
 }

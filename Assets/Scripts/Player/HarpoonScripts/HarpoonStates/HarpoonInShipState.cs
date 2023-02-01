@@ -23,7 +23,11 @@ public class HarpoonInShipState : HarpoonBaseState
         if (Input.GetButtonDown("Fire1") && stateManager.harpoonRb.bodyType == RigidbodyType2D.Static)
         {
             Vector3 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 direction = (clickPosition - stateManager.harpoonRb.transform.position).normalized;
+            float angle = Mathf.Atan2(clickPosition.y - stateManager.harpoon.transform.position.y, 
+                                      clickPosition.x - stateManager.harpoon.transform.position.x) * Mathf.Rad2Deg;
+            angle = Mathf.Clamp(angle, -60, 30);
+            Vector3 direction = Quaternion.AngleAxis(angle, Vector3.forward) * Vector2.right;
+
             stateManager.harpoonRb.bodyType = RigidbodyType2D.Dynamic;
             stateManager.harpoonRb.velocity = direction * stateManager.speed;
             Debug.Log(direction * stateManager.speed * stateManager.harpoonStartPoint.transform.localScale.x);

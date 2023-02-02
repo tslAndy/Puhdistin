@@ -8,26 +8,28 @@ public class ItemSpawner : MonoBehaviour
 {
     public Collider2D spawnZone;
 
+    public float spawnInterval = 4f;
+
     [SerializeField]
     private int amount;
 
     [SerializeField]
-    private GameObject[] itemsPrefabs;
+    protected GameObject[] itemsPrefabs;
 
     [NonSerialized]
     public int spawnedAmount;
 
     protected GameObject spawned;
 
-    private float startX, startY;
-    private float width, height;
+    protected float startX, startY;
+    protected float width, height;
 
-    private float ratio;
-    private float ySteps, xSteps;
+    protected float ratio;
+    protected float ySteps, xSteps;
 
-    private float xStep, yStep;
+    protected float xStep, yStep;
 
-    private List<GameObject> items = new List<GameObject>();
+    protected List<GameObject> items = new List<GameObject>();
 
     private void Start()
     {
@@ -44,7 +46,7 @@ public class ItemSpawner : MonoBehaviour
         xStep = width / xSteps;
         yStep = height / ySteps;
 
-        InvokeRepeating("SpawnItems", 0f, 4f);
+        InvokeRepeating("SpawnItems", 0f, spawnInterval);
     }
 
     public virtual IEnumerator DelayedDisabling(GameObject spawned)

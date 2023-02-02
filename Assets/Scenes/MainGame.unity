@@ -6761,6 +6761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnZone: {fileID: 693538703}
+  spawnInterval: 4
   amount: 2
   itemsPrefabs:
   - {fileID: 3154231673714371727, guid: 55db9dfdd4ab28b4aac7cc17158604eb, type: 3}
@@ -6858,6 +6859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnZone: {fileID: 693538703}
+  spawnInterval: 4
   amount: 0
   itemsPrefabs:
   - {fileID: 6391173716575900406, guid: ad15b9a19a94b9c4b82377a8e579865e, type: 3}
@@ -6875,7 +6877,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnZone: {fileID: 693538711}
-  amount: 10
+  spawnInterval: 8
+  amount: 6
   itemsPrefabs:
   - {fileID: 1371790135330160996, guid: 0f97335461494454d8931d5214582767, type: 3}
 --- !u!61 &693538711
@@ -6891,7 +6894,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 23.322353, y: -4.83}
+  m_Offset: {x: 23.32, y: -4.97}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}

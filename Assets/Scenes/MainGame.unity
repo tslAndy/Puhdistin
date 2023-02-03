@@ -14872,31 +14872,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layers:
   - image: {fileID: 415204126}
-    speed: 0.4
+    speed: 1
   - image: {fileID: 644665878}
     speed: 0.3
   - image: {fileID: 1407412035}
     speed: 0.5
   - image: {fileID: 1518817226}
-    speed: 2.5
+    speed: 0.4
   - image: {fileID: 1223606381}
     speed: 0.6
   - image: {fileID: 1725818375}
-    speed: 0.5
-  - image: {fileID: 1843465393}
-    speed: 1.5
-  - image: {fileID: 1371326831}
-    speed: 2
-  - image: {fileID: 340926740}
-    speed: 0.2
-  - image: {fileID: 347447015}
-    speed: 0.4
-  - image: {fileID: 1169235332}
-    speed: 0.6
-  - image: {fileID: 1110359862}
     speed: 0.8
-  - image: {fileID: 1988454015}
+  - image: {fileID: 1843465393}
     speed: 1
+  - image: {fileID: 1371326831}
+    speed: 1.2
+  - image: {fileID: 340926740}
+    speed: 0.1
+  - image: {fileID: 347447015}
+    speed: 0.2
+  - image: {fileID: 1169235332}
+    speed: 0.3
+  - image: {fileID: 1110359862}
+    speed: 0.4
+  - image: {fileID: 1988454015}
+    speed: 0.5
 --- !u!1 &1518817226
 GameObject:
   m_ObjectHideFlags: 0

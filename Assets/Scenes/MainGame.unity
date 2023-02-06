@@ -7852,7 +7852,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1482008045}
-  - component: {fileID: 1482008049}
+  - component: {fileID: 1482008050}
   m_Layer: 0
   m_Name: Parallax
   m_TagString: Untagged
@@ -7888,7 +7888,7 @@ Transform:
   m_Father: {fileID: 1393094274}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1482008049
+--- !u!114 &1482008050
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7897,10 +7897,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1482008044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e0f2e56716b235468dec47fbee82984, type: 3}
+  m_Script: {fileID: 11500000, guid: 2cfe83ccee0fa5345a14740cdcbfdde5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layers:
+  backLayers:
   - image: {fileID: 415204126}
     speed: 1
   - image: {fileID: 644665878}
@@ -9890,7 +9890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6219562513026765674, guid: 4050d1a4bcb0ce34e90ac39f95383fe6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.98
+      value: 1.77
       objectReference: {fileID: 0}
     - target: {fileID: 6219562513026765674, guid: 4050d1a4bcb0ce34e90ac39f95383fe6, type: 3}
       propertyPath: m_LocalPosition.z

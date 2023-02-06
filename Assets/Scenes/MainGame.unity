@@ -182,11 +182,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 408662154007229888, guid: b993fad60266b3d4cbf6d2a1020f604c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.807
+      value: -3.846
       objectReference: {fileID: 0}
     - target: {fileID: 408662154007229888, guid: b993fad60266b3d4cbf6d2a1020f604c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.68664026
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 408662154007229888, guid: b993fad60266b3d4cbf6d2a1020f604c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1361,7 +1361,24 @@ MonoBehaviour:
   spawnZone: {fileID: 693538703}
   amount: 2
   itemsPrefabs:
-  - {fileID: 3154231673714371727, guid: 55db9dfdd4ab28b4aac7cc17158604eb, type: 3}
+  - {fileID: 4681715754090133309, guid: 8620ebfeb979d2e4f99f736c0bd7e22d, type: 3}
+  - {fileID: 8312483516471510249, guid: f1048b03310d67748b8482e468e59f21, type: 3}
+  - {fileID: 5649310996657313226, guid: 261747784bbbc8443a274e7c6f9fff16, type: 3}
+  - {fileID: 2024758097245022154, guid: ff9e5223c6cdb434dbee3c7e87f63986, type: 3}
+  - {fileID: 2778252922119209504, guid: 913de5fe8d1a22246872f2223efe4317, type: 3}
+  - {fileID: 7544369399038197863, guid: 71a0230304463c745a1456b0e030371e, type: 3}
+  - {fileID: 4717457544370306455, guid: 8ca426265a9187e4eae7579fb2d98fef, type: 3}
+  - {fileID: 9123698448150723047, guid: a7e9d2ca55f4a2549ae55780632cd28f, type: 3}
+  - {fileID: 4049028613845122338, guid: 591eb193f16cbda4a9a695d4d87b683d, type: 3}
+  - {fileID: 4662834109045849654, guid: 0a41a2d32b8609e4da5942d77f8cc22a, type: 3}
+  - {fileID: 6134535885853815867, guid: 6ee3e02789287db4b89d80a27a7c836e, type: 3}
+  - {fileID: 6938758897587848458, guid: 46034270c889a804e880164f5b7306f9, type: 3}
+  - {fileID: 3167255811679016430, guid: a0537471b90b6d74ca89123c624ae6e5, type: 3}
+  - {fileID: 8100999086268110422, guid: 72eb44ae00c7ed14ba1b4431f235d77f, type: 3}
+  - {fileID: 4825222673315575712, guid: 83e2687d19567b2458462d728daf1ebf, type: 3}
+  - {fileID: 5103271602057689473, guid: 62006d4709c35b74881859f0186f1c38, type: 3}
+  - {fileID: 7500547096641943103, guid: 48eef18f688519a4ba7dc12363a0b8e5, type: 3}
+  - {fileID: 4638509743028569286, guid: ce6aea810c99a0645b15e7c2766452df, type: 3}
 --- !u!114 &693538705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1375,27 +1392,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   garbageInfos:
-  - garbageTag: Plastic
+  - garbageTag: CigaretteBut
     facts:
-    - As much as 250 million tons of plastic could make it's way into the ocean by
-      2025.
-    - Plastic cost approximately $13 billion a year in environmental amage to marine
-      ecosystems.
-    - Almost 400 different species have ingested or become entangled in marine debris
-      - lastics are the culpit in 92% of cases.
-    - Plastic bags are decomposed ater 10-20 years.
-    - Plastic cutlery is decomposed after 100-1000 years.
-    - Plastic cutlery is decomposed after 100-1000 years.
-    - Plastic bottle is decomposed after 450 years.
-  - garbageTag: Cartoon
-    facts:
-    - Cardboard is decomposed after 2 months.
-  - garbageTag: Metall
-    facts:
-    - Aluminium can is decomposed fter 200 years.
-  - garbageTag: Glass
-    facts:
-    - Glass bottle is decomposed after 1000000 years.
+    - Cigarette but is decomposed in 2-15 years.
 --- !u!114 &693538706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1460,7 +1459,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693538700}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccd5ca4228c6d8840a566f98f816931a, type: 3}
   m_Name: 
@@ -7574,7 +7573,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 362950213
   m_SortingLayer: 1
-  m_SortingOrder: 10
+  m_SortingOrder: 11
   m_Sprite: {fileID: 21300000, guid: 4a1ed90894f0af74e89a809acb13093a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9872,6 +9871,10 @@ PrefabInstance:
       propertyPath: harpoon
       value: 
       objectReference: {fileID: 109107920}
+    - target: {fileID: 6219562513026765652, guid: 4050d1a4bcb0ce34e90ac39f95383fe6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6219562513026765654, guid: 4050d1a4bcb0ce34e90ac39f95383fe6, type: 3}
       propertyPath: onGarbageCollecting
       value: 

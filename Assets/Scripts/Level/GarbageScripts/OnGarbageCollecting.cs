@@ -24,7 +24,7 @@ public class OnGarbageCollecting : MonoBehaviour
     {
         score++;
         scoreText.SetText($"Score: {score}");
-        string fact = factsSystem.GetRandomFact(tag);
+        string fact = garbage.GetComponent<Garbage>().fact;
         Debug.Log(fact);
         factText.SetText(fact);
         ObstaclesMoverScript.RemoveObstacle(garbage);

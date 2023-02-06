@@ -14,22 +14,22 @@ public class ItemSpawner : MonoBehaviour
     private int amount;
 
     [SerializeField]
-    protected GameObject[] itemsPrefabs;
+    private GameObject[] itemsPrefabs;
 
     [NonSerialized]
     public int spawnedAmount;
 
     protected GameObject spawned;
 
-    protected float startX, startY;
-    protected float width, height;
+    private float startX, startY;
+    private float width, height;
 
-    protected float ratio;
-    protected float ySteps, xSteps;
+    private float ratio;
+    private float ySteps, xSteps;
 
-    protected float xStep, yStep;
+    private float xStep, yStep;
 
-    protected List<GameObject> items = new List<GameObject>();
+    private List<GameObject> items = new List<GameObject>();
 
     private void Start()
     {

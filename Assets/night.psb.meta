@@ -1,0 +1,691 @@
+fileFormatVersion: 2
+guid: e6d31a08d0e1258408c065bc1baabc4f
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 2
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 0
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: WaterEffect
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2900
+      width: 2560
+      height: 1382
+    spriteID: c3dbf23513a16ce4aa5b672b3aca8886
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2900}
+    spritePosition: {x: 0, y: -737}
+  - name: Sand_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 7763
+      width: 2560
+      height: 86
+    spriteID: d1a546bf6f53c3c4ba2c1466be856d73
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 7763}
+    spritePosition: {x: 0, y: 0}
+  - name: Sand_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 7946
+      width: 2560
+      height: 78
+    spriteID: cc7240377b9a12d4f85e3fbdfbde0e7e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 7946}
+    spritePosition: {x: 0, y: 0}
+  - name: Sand_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 7857
+      width: 2560
+      height: 81
+    spriteID: 76be00e82d8976948a251c8540d8f7af
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 7857}
+    spritePosition: {x: 0, y: 0}
+  - name: Corals_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 7279
+      width: 2560
+      height: 265
+    spriteID: 0882338e1f7606244bc226f214f6c90a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 7279}
+    spritePosition: {x: 0, y: 0}
+  - name: Corals_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 6931
+      width: 2561
+      height: 340
+    spriteID: 97a63102b39724f49b5269bdf12712a1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 6931}
+    spritePosition: {x: 2, y: -28}
+  - name: UndeerwaterMountains_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 7552
+      width: 2560
+      height: 203
+    spriteID: 32f2afd79bbed3246b7164324817ddec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 7552}
+    spritePosition: {x: 0, y: 0}
+  - name: UnderwaterMountains_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 2560
+      height: 1440
+    spriteID: d5ebe34f63ebf2f45b530e53792d12bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 0}
+  - name: Waves_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 5723
+      width: 2560
+      height: 690
+    spriteID: bf7f3ff8477638949b8e69f304bbfa88
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 5723}
+    spritePosition: {x: 0, y: 0}
+  - name: Waves_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 5011
+      width: 2560
+      height: 704
+    spriteID: 194fada7ab121254da856f452ddf36a3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 5011}
+    spritePosition: {x: 0, y: 0}
+  - name: Waves_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4290
+      width: 2563
+      height: 713
+    spriteID: 5457f9e96ad778842abd679fdbf3b9e2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4290}
+    spritePosition: {x: 0, y: 0}
+  - name: Lighthouse
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2572
+      y: 2900
+      width: 572
+      height: 786
+    spriteID: 34ef423785f1c494eafb809ffc892fda
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2572, y: 2900}
+    spritePosition: {x: 1850, y: 600}
+  - name: LighthouseLight
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3640
+      y: 2900
+      width: 26
+      height: 47
+    spriteID: 140e4dad1dfaa0f42a362a9547590070
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3640, y: 2900}
+    spritePosition: {x: 2236, y: 1244}
+  - name: Moon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3152
+      y: 2900
+      width: 480
+      height: 476
+    spriteID: 161057646b579014e9cec66cd0167dce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3152, y: 2900}
+    spritePosition: {x: 594, y: 964}
+  - name: Stars
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 6421
+      width: 2176
+      height: 502
+    spriteID: a74bdb02f3127e94fb1e4d34ac3819ff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 6421}
+    spritePosition: {x: 195, y: 843}
+  - name: Sky
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1452
+      width: 2560
+      height: 1440
+    spriteID: 486b3449d7131f54383a4131bef63e5e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1452}
+    spritePosition: {x: 0, y: 0}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  padding: 4
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: WaterEffect
+    spriteName: WaterEffect
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c3dbf23513a16ce4aa5b672b3aca8886
+    layerID: 42
+    mosaicPosition: {x: 4, y: 2900}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Sand_3
+    spriteName: Sand_3
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d1a546bf6f53c3c4ba2c1466be856d73
+    layerID: 39
+    mosaicPosition: {x: 4, y: 7763}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Sand_2
+    spriteName: Sand_2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: cc7240377b9a12d4f85e3fbdfbde0e7e
+    layerID: 38
+    mosaicPosition: {x: 4, y: 7946}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Sand_1
+    spriteName: Sand_1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 76be00e82d8976948a251c8540d8f7af
+    layerID: 45
+    mosaicPosition: {x: 4, y: 7857}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Corals_2
+    spriteName: Corals_2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0882338e1f7606244bc226f214f6c90a
+    layerID: 47
+    mosaicPosition: {x: 4, y: 7279}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Corals_1
+    spriteName: Corals_1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 97a63102b39724f49b5269bdf12712a1
+    layerID: 46
+    mosaicPosition: {x: 4, y: 6931}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: UndeerwaterMountains_2
+    spriteName: UndeerwaterMountains_2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 32f2afd79bbed3246b7164324817ddec
+    layerID: 44
+    mosaicPosition: {x: 4, y: 7552}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: UnderwaterMountains_1
+    spriteName: UnderwaterMountains_1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d5ebe34f63ebf2f45b530e53792d12bb
+    layerID: 43
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Waves_3
+    spriteName: Waves_3
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bf7f3ff8477638949b8e69f304bbfa88
+    layerID: 33
+    mosaicPosition: {x: 4, y: 5723}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Waves_2
+    spriteName: Waves_2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 194fada7ab121254da856f452ddf36a3
+    layerID: 32
+    mosaicPosition: {x: 4, y: 5011}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Waves_1
+    spriteName: Waves_1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5457f9e96ad778842abd679fdbf3b9e2
+    layerID: 31
+    mosaicPosition: {x: 4, y: 4290}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Lighthouse
+    spriteName: Lighthouse
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 34ef423785f1c494eafb809ffc892fda
+    layerID: 29
+    mosaicPosition: {x: 2572, y: 2900}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: LighthouseLight
+    spriteName: LighthouseLight
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 140e4dad1dfaa0f42a362a9547590070
+    layerID: 34
+    mosaicPosition: {x: 3640, y: 2900}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Moon
+    spriteName: Moon
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 161057646b579014e9cec66cd0167dce
+    layerID: 6
+    mosaicPosition: {x: 3152, y: 2900}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Stars
+    spriteName: Stars
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a74bdb02f3127e94fb1e4d34ac3819ff
+    layerID: 9
+    mosaicPosition: {x: 4, y: 6421}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Sky
+    spriteName: Sky
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 486b3449d7131f54383a4131bef63e5e
+    layerID: 2
+    mosaicPosition: {x: 4, y: 1452}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting:
+  - spriteId: c3dbf23513a16ce4aa5b672b3aca8886
+    name: WaterEffect
+    layerId: 42
+    flatten: 0
+    isGroup: 0
+    importLayer: 1
+  - spriteId: 5457f9e96ad778842abd679fdbf3b9e2
+    name: Waves_1
+    layerId: 31
+    flatten: 0
+    isGroup: 0
+    importLayer: 1
+  - spriteId: 194fada7ab121254da856f452ddf36a3
+    name: Waves_2
+    layerId: 32
+    flatten: 0
+    isGroup: 0
+    importLayer: 1
+  - spriteId: bf7f3ff8477638949b8e69f304bbfa88
+    name: Waves_3
+    layerId: 33
+    flatten: 0
+    isGroup: 0
+    importLayer: 1
+  importFileNodeState: 1
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

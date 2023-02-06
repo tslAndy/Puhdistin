@@ -13,6 +13,10 @@ public class Movement : MonoBehaviour
     private float valueForSin = 0f;
     private float defaultY;
 
+    private bool canMove = true;
+
+    public bool CanMove { get; set; }
+
     private void Start()
     {
         defaultY = transform.position.y;
@@ -20,9 +24,11 @@ public class Movement : MonoBehaviour
     private void Update()
     {
         float xDirection = Input.GetAxisRaw("Horizontal");
-        transform.position += Vector3.right * speed * xDirection * Time.deltaTime;
+        if(canMove)
+            transform.position += Vector3.right * speed * xDirection * Time.deltaTime;
 
-        valueForSin += dSin * Time.deltaTime;
+        if(canMove)
+            valueForSin += dSin * Time.deltaTime;
 
         if (float.MaxValue - valueForSin < 1000)
             valueForSin = 0;

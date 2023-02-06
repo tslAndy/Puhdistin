@@ -45,8 +45,18 @@ public class OnGarbageCollecting : MonoBehaviour
         scoreText.SetText($"Score: {score}");
         string fact = factsSystem.GetRandomFact(tag);
         Debug.Log(fact);
-        factText.SetText(fact);
+        StartCoroutine(Print(factText, fact, .05f));
         ObstaclesMoverScript.RemoveObstacle(garbage);
+    }
+
+    IEnumerator Print(TMP_Text textBoxToPrint, string textToPrint, float delayBetweenLetters)
+    {
+        textBoxToPrint.text = "";
+        for (int i = 0; i < textToPrint.Length; i++)
+        {
+            textBoxToPrint.text += textToPrint[i];
+            yield return new WaitForSeconds(delayBetweenLetters);
+        }
     }
 
     public void DeactivateEffect()

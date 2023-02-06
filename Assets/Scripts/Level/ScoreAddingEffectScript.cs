@@ -17,10 +17,10 @@ public class ScoreAddingEffectScript : MonoBehaviour
     {
         Debug.Log("Working");
         scoreEffectText.text = $"+ {garbageValue}";
-        scoreEffectText.enabled = true;
+        scoreEffectText.gameObject.SetActive(true);
     }
     public void DeactivateEffect()
     {
-        scoreEffectText.enabled = false;
+        scoreEffectText.gameObject.SetActive(false);
     }
 }

@@ -2380,7 +2380,7 @@ MonoBehaviour:
   - image: {fileID: 913899430}
     speed: 0.25
   - image: {fileID: 267958371}
-    speed: 0.1
+    speed: 0.3
   - image: {fileID: 807605580}
     speed: 0.2
   - image: {fileID: 715613460}

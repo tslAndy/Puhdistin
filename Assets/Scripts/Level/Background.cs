@@ -22,7 +22,7 @@ public class Background : MonoBehaviour
         [NonSerialized]
         public int imagesAmount = 3;
 
-        public void CalculateWidth() => width = image.GetComponent<SpriteRenderer>().bounds.size.x - 0.001f;
+        public void CalculateWidth() => width = image.GetComponent<SpriteRenderer>().bounds.size.x - 0.01f;
         public Layer() => images = new List<GameObject>();
     }
 

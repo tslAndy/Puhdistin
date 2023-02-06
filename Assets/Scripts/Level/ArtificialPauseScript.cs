@@ -34,26 +34,47 @@ public class ArtificialPauseScript : MonoBehaviour
     {
         //storing speed values for pause effect in tutorial
         background = backgroundScript.Layers;
+        
+
+        DeactivateAllSpawners();
+        DeactivateAllMovment();
+        DeactivateBackground();
+    }
+
+    public void DeactivateBackground()
+    {
         for (int i = 0; i < background.Length; i++)
         {
             backgroundSpeedValues.Add(background[i].image, backgroundScript[i]);
             backgroundScript[i] = 0;
         }
-
-        DeactivateAllSpawners();
-        DeactivateAllMovment();
     }
-
-
-    private void DeactivateAllSpawners()
+    public void ActivateBackground()
+    {
+        for (int i = 0; i < background.Length; i++)
+        {
+            backgroundScript[i] = backgroundSpeedValues[background[i].image];
+        }
+    }
+    public void DeactivateAllSpawners()
     {
         garbageSpawner.enabled = false;
         smallGarbageSpawner.enabled = false;
         woodSpawner.enabled = false;
     }
-    private void DeactivateAllMovment()
+    public void ActivateAllSpawners()
     {
-        vacoomScript.CanUseVacoom = false;
-        movementScript.CanMove = false;
+        garbageSpawner.enabled = true;
+        smallGarbageSpawner.enabled = true;
+        woodSpawner.enabled = true;
     }
+    public void DeactivateAllMovment()
+    {
+        movementScript.CanMove = false;
+        HarpoonInShipState.DisableThrowing();
+        vacoomScript.CanUseVacoom = false;
+    }
+    public void ActivateVacoom() => vacoomScript.CanUseVacoom = true;
+    public void ActivateThroving() => HarpoonInShipState.EnableThrowing();
+    public void ActivateShipMovement() => movementScript.CanMove = true;
 }

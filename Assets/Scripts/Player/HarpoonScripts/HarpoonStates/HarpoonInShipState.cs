@@ -7,6 +7,8 @@ public class HarpoonInShipState : HarpoonBaseState
 {
     private HarpoonStateManager stateManager;
 
+    private static bool canThrow = true;
+
 
     public override void EnterState(HarpoonStateManager stateManager)
     {
@@ -20,7 +22,7 @@ public class HarpoonInShipState : HarpoonBaseState
     {
         stateManager.harpoon.transform.position = stateManager.harpoonStartPoint.transform.position;
 
-        if (Input.GetButtonDown("Fire1") && stateManager.harpoonRb.bodyType == RigidbodyType2D.Static)
+        if (Input.GetButtonDown("Fire1") && stateManager.harpoonRb.bodyType == RigidbodyType2D.Static && canThrow)
         {
             Vector3 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             float angle = Mathf.Atan2(clickPosition.y - stateManager.harpoon.transform.position.y, 
@@ -34,6 +36,15 @@ public class HarpoonInShipState : HarpoonBaseState
             stateManager.SwitchState(stateManager.throwedState);
         }
 
+    }
+
+    public static void DisableThrowing()
+    {
+        canThrow = false;
+    }
+    public static void EnableThrowing()
+    {
+        canThrow = true;
     }
 
     public override void OnCollisionEnterState(HarpoonStateManager stateManager, Collision2D collision)

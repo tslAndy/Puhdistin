@@ -24,10 +24,10 @@ public class Movement : MonoBehaviour
     private void Update()
     {
         float xDirection = Input.GetAxisRaw("Horizontal");
-        if(canMove)
+        if(CanMove)
             transform.position += Vector3.right * speed * xDirection * Time.deltaTime;
 
-        if(canMove)
+        if(CanMove)
             valueForSin += dSin * Time.deltaTime;
 
         if (float.MaxValue - valueForSin < 1000)

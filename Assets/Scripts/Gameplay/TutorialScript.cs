@@ -131,9 +131,13 @@ public class TutorialScript : MonoBehaviour
 
     private void BouncingPartLogic()
     {
-        if ((counter == 0))
+        pauseController.ActivateShipMovement();
+        pauseController.ActivateBackground();
+        pauseController.ActivateThroving();
+        pauseController.ActivateWoodSpawner();
+        if ((counter == 0) || Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2"))
         {
-            PrintOrMoveStatement(TutorialStages.TutorialGarbageCollectingPart);
+            PrintOrMoveStatement();
         }
     }
 
@@ -142,15 +146,7 @@ public class TutorialScript : MonoBehaviour
         pauseController.ActivateThroving();
         if ((counter == 0) || isTutorialGarbageCollected)
         {
-            if (textToPrint.Length > counter)
-            {
-                coroutineCounter++;
-                StartCoroutine(Print(textTutorial, textToPrint[counter], 0.05f));
-            } else
-            {
-                canvasAnimator.SetTrigger("IsTutorialEnded");
-                pauseController.ActivateGarbageSpawner();
-            }
+            PrintOrMoveStatement();
         }
     }
 
@@ -186,6 +182,19 @@ public class TutorialScript : MonoBehaviour
             MoveToStage(destination);
         }
     }
+    private void PrintOrMoveStatement()
+    {
+        if (textToPrint.Length > counter)
+        {
+            coroutineCounter++;
+            StartCoroutine(Print(textTutorial, textToPrint[counter], 0.05f));
+        }
+        else
+        {
+            canvasAnimator.SetTrigger("IsTutorialEnded");
+            pauseController.ActivateGarbageSpawner();
+        }
+    }
     private void MoveToStage(TutorialStages stage)
     {
         counter = 0;
@@ -212,7 +221,6 @@ public class TutorialScript : MonoBehaviour
 
     private void CollectTutorialGarbage(int garbageValue)
     {
-        Debug.Log("Collected");
         isTutorialGarbageCollected = true;
     }
 }

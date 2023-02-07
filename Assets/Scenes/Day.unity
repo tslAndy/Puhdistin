@@ -5965,7 +5965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 591dc0da824f15442a4f338631268710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startFrom: 1
+  startFrom: 0
   textTutorial: {fileID: 63527360}
   parts:
     parts:

@@ -6,9 +6,9 @@ public class ArtificialPauseScript : MonoBehaviour
 {
     //Paralax
     [SerializeField]
-    private Background backgroundScript;
+    private NewBackground backgroundScript;
 
-    private Background.Layer[] background;
+    private BackLayer[] background;
 
     private Dictionary<GameObject, float> backgroundSpeedValues = new Dictionary<GameObject, float>();
 
@@ -33,7 +33,7 @@ public class ArtificialPauseScript : MonoBehaviour
     private void Awake()
     {
         //storing speed values for pause effect in tutorial
-        background = backgroundScript.Layers;
+        background = backgroundScript.BackLayers;
         
 
         DeactivateAllSpawners();
@@ -45,15 +45,15 @@ public class ArtificialPauseScript : MonoBehaviour
     {
         for (int i = 0; i < background.Length; i++)
         {
-            backgroundSpeedValues.Add(background[i].image, backgroundScript[i]);
-            backgroundScript[i] = 0;
+            backgroundSpeedValues.Add(background[i].image, background[i].speed);
+            background[i].speed = 0;
         }
     }
     public void ActivateBackground()
     {
         for (int i = 0; i < background.Length; i++)
         {
-            backgroundScript[i] = backgroundSpeedValues[background[i].image];
+            background[i].speed = backgroundSpeedValues[background[i].image];
         }
     }
     public void DeactivateAllSpawners()
@@ -62,18 +62,15 @@ public class ArtificialPauseScript : MonoBehaviour
         smallGarbageSpawner.enabled = false;
         woodSpawner.enabled = false;
     }
-    public void ActivateAllSpawners()
-    {
-        garbageSpawner.enabled = true;
-        smallGarbageSpawner.enabled = true;
-        woodSpawner.enabled = true;
-    }
     public void DeactivateAllMovment()
     {
         movementScript.CanMove = false;
         HarpoonInShipState.DisableThrowing();
         vacoomScript.CanUseVacoom = false;
     }
+    public void ActivateWoodSpawner() => woodSpawner.enabled = true;
+    public void ActivateSmallGarbageSpawner() => smallGarbageSpawner.enabled = true;
+    public void ActivateGarbageSpawner() => garbageSpawner.enabled = true;
     public void ActivateVacoom() => vacoomScript.CanUseVacoom = true;
     public void ActivateThroving() => HarpoonInShipState.EnableThrowing();
     public void ActivateShipMovement() => movementScript.CanMove = true;

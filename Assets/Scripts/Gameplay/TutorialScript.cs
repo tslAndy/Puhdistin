@@ -123,6 +123,17 @@ public class TutorialScript : MonoBehaviour
             case TutorialStages.TutorialGarbageCollectingPart:
                 GarbageCollectingPartLogic();
                 break;
+            case TutorialStages.TutorialLogBouncingPart:
+                BouncingPartLogic();
+                break;
+        }
+    }
+
+    private void BouncingPartLogic()
+    {
+        if ((counter == 0) || isTutorialGarbageCollected)
+        {
+            PrintOrMoveStatement(TutorialStages.TutorialGarbageCollectingPart);
         }
     }
 
@@ -138,6 +149,7 @@ public class TutorialScript : MonoBehaviour
             } else
             {
                 canvasAnimator.SetTrigger("IsTutorialEnded");
+                pauseController.ActivateGarbageSpawner();
             }
         }
     }
@@ -149,17 +161,7 @@ public class TutorialScript : MonoBehaviour
         pauseController.ActivateBackground();
         if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2") || (Input.GetAxis("Horizontal") != 0) || (counter == 0))
         {
-            Debug.Log(textToPrint.Length);
-            Debug.Log(counter);
-            if (textToPrint.Length > counter)
-            {
-                coroutineCounter++;
-                StartCoroutine(Print(textTutorial, textToPrint[counter], 0.05f));
-            }
-            else
-            {
-                MoveToStage(TutorialStages.TutorialGarbageCollectingPart);
-            }
+            PrintOrMoveStatement(TutorialStages.TutorialGarbageCollectingPart);
         }
     }
 
@@ -168,14 +170,20 @@ public class TutorialScript : MonoBehaviour
         squidAnimator.SetTrigger("IsIdleEmote");
         if ((Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2")))
         {
-            if (textToPrint.Length > counter)
-            {
-                coroutineCounter++;
-                StartCoroutine(Print(textTutorial, textToPrint[counter], 0.05f));
-            } else
-            {
-                MoveToStage(TutorialStages.TutorialMovingPart);
-            }
+            PrintOrMoveStatement(TutorialStages.TutorialMovingPart);
+        }
+    }
+
+    private void PrintOrMoveStatement(TutorialStages destination)
+    {
+        if (textToPrint.Length > counter)
+        {
+            coroutineCounter++;
+            StartCoroutine(Print(textTutorial, textToPrint[counter], 0.05f));
+        }
+        else
+        {
+            MoveToStage(destination);
         }
     }
     private void MoveToStage(TutorialStages stage)

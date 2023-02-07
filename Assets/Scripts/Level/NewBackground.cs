@@ -8,6 +8,8 @@ public class NewBackground : MonoBehaviour
     [SerializeField]
     private BackLayer[] backLayers;
 
+    public BackLayer[] BackLayers { get { return backLayers; } }
+
 
 
     void Start()

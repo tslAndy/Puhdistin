@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6854579979142225905}
   - component: {fileID: 7460983057016453219}
   - component: {fileID: 1984997330027272105}
+  - component: {fileID: 925818410727368565}
   m_Layer: 6
   m_Name: GlassBottle
   m_TagString: Garbage
@@ -35,7 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9123698448150723040
 SpriteRenderer:
@@ -5006,3 +5007,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fact: Decomposing time is undetermined.
+  value: 3
+--- !u!70 &925818410727368565
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9123698448150723047}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0060237944, y: 0}
+  m_Size: {x: 0.90242416, y: 0.90242416}
+  m_Direction: 0

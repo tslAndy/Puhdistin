@@ -11,16 +11,6 @@ public class OnGarbageCollecting : MonoBehaviour
 
     public event Action<int> OnGarbageColldected;
 
-    [SerializeField]
-    private GarbageValue[] garbageValue;
-
-    [Serializable]
-    class GarbageValue
-    {
-        public string tag;
-        public int value;
-    }
-
     [NonSerialized]
     public int score = 0;
     private FactsSystem factsSystem;
@@ -34,14 +24,9 @@ public class OnGarbageCollecting : MonoBehaviour
     //Printing facts, adding poits, and deleiting garbage from moving list
     public void HandleCollect(string tag, GameObject garbage)
     {
-        for (int i = 0; i < garbageValue.Length; i++)
-        {
-            if (tag == garbageValue[i].tag)
-            {
-                score += garbageValue[i].value;
-                OnGarbageColldected?.Invoke(garbageValue[i].value);
-            }
-        }
+        score += garbage.GetComponent<Garbage>().value;
+        OnGarbageColldected?.Invoke(garbage.GetComponent<Garbage>().value);
+
         scoreText.SetText($"Score: {score}");
         string fact = garbage.GetComponent<Garbage>().fact;
         Debug.Log(fact);

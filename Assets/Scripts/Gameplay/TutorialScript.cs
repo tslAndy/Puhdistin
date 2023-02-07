@@ -131,7 +131,7 @@ public class TutorialScript : MonoBehaviour
 
     private void BouncingPartLogic()
     {
-        if ((counter == 0) || isTutorialGarbageCollected)
+        if ((counter == 0))
         {
             PrintOrMoveStatement(TutorialStages.TutorialGarbageCollectingPart);
         }
@@ -212,6 +212,7 @@ public class TutorialScript : MonoBehaviour
 
     private void CollectTutorialGarbage(int garbageValue)
     {
+        Debug.Log("Collected");
         isTutorialGarbageCollected = true;
     }
 }

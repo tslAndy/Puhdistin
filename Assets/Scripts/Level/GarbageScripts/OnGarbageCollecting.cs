@@ -43,7 +43,7 @@ public class OnGarbageCollecting : MonoBehaviour
             }
         }
         scoreText.SetText($"Score: {score}");
-        string fact = factsSystem.GetRandomFact(tag);
+        string fact = garbage.GetComponent<Garbage>().fact;
         Debug.Log(fact);
         StartCoroutine(Print(factText, fact, .05f));
         ObstaclesMoverScript.RemoveObstacle(garbage);

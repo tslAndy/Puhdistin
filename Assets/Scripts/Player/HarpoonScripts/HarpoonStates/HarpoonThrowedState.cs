@@ -54,7 +54,7 @@ public class HarpoonThrowedState : HarpoonBaseState
     //Collecting garbage
     public override void OnTriggerEnterState(HarpoonStateManager stateManager, Collider2D collision)
     {
-        if (Array.Exists(stateManager.garbageTags, element => element == collision.gameObject.tag) && stateManager.garbage == null)
+        if (collision.gameObject.tag == "Garbage" && stateManager.garbage == null)
         {
             PlayHarpoonAnimation(collision);
             stateManager.garbage = collision.gameObject;

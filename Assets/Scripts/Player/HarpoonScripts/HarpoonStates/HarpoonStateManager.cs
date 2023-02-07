@@ -68,6 +68,12 @@ public class HarpoonStateManager : MonoBehaviour
     }
 
     // Update is called once per frame
+
+
+
+        //remake garbage info system
+
+
     void Update()
     {
         currentState.UpdateState(this);

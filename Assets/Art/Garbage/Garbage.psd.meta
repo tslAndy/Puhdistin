@@ -103,6 +103,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -194,12 +206,12 @@ TextureImporter:
       name: Garbage_5
       rect:
         serializedVersion: 2
-        x: 1488
-        y: 1003
-        width: 54
-        height: 89
+        x: 1465
+        y: 989
+        width: 107
+        height: 151
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -354,27 +366,6 @@ TextureImporter:
       bones: []
       spriteID: a0d3ffe43613bc0409be0b69d0f6282d
       internalID: 102886612
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Garbage_16
-      rect:
-        serializedVersion: 2
-        x: 1986
-        y: 818
-        width: 77
-        height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 788b4b8fb6562d24cac5a644f1f2c915
-      internalID: 1172744243
       vertices: []
       indices: 
       edges: []
@@ -548,13 +539,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Garbage_27
+      name: Garbage_0
       rect:
         serializedVersion: 2
-        x: 2282
-        y: 321
-        width: 61
-        height: 63
+        x: 2182
+        y: 357
+        width: 211
+        height: 211
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -562,8 +553,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb08965a9639da24caad8e99241ed968
-      internalID: -64876188
+      spriteID: 31d5464e399d7a04c9ea7e3ddb4745ff
+      internalID: -240777078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage_8
+      rect:
+        serializedVersion: 2
+        x: 1994
+        y: 857
+        width: 336
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d748bffbbe937e246b86a8088e1cffab
+      internalID: -771071649
       vertices: []
       indices: 
       edges: []

@@ -5,4 +5,6 @@ using UnityEngine;
 public class Garbage: MonoBehaviour
 {
     public string fact;
+
+    public int value;
 }

@@ -10,12 +10,10 @@ public class ObstaclesMoverScript : MonoBehaviour
     private static List<GameObject> obstacles = new List<GameObject>();
 
 
-    private void Update()
+    private void LateUpdate()
     {
         foreach (var item in obstacles)
         {
-            if (item == null)
-                continue;
             item.transform.position -= new Vector3(speed * Time.deltaTime, 0);
         }
     }

@@ -29,6 +29,14 @@ public class Background : MonoBehaviour
     [SerializeField]
     private Layer[] layers;
 
+    public Layer[] Layers { get { return layers; } set { layers = value; } }
+
+    public float this[int index]
+    {
+        get => Layers[index].speed;
+        set => layers[index].speed = value;
+    }
+
     private void Start()
     {
         foreach (Layer layer in layers)

@@ -6,6 +6,7 @@ using UnityEngine;
 public class HarpoonThrowedState : HarpoonBaseState
 {
     private HarpoonStateManager stateManager;
+
     public override void EnterState(HarpoonStateManager stateManager)
     {
         this.stateManager = stateManager;
@@ -50,6 +51,7 @@ public class HarpoonThrowedState : HarpoonBaseState
     {
     }
 
+    //Collecting garbage
     public override void OnTriggerEnterState(HarpoonStateManager stateManager, Collider2D collision)
     {
         if (collision.gameObject.tag == "Garbage" && stateManager.garbage == null)

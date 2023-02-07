@@ -8,6 +8,8 @@ public class ItemSpawner : MonoBehaviour
 {
     public Collider2D spawnZone;
 
+    public float spawnInterval = 4f;
+
     [SerializeField]
     private int amount;
 
@@ -44,7 +46,7 @@ public class ItemSpawner : MonoBehaviour
         xStep = width / xSteps;
         yStep = height / ySteps;
 
-        InvokeRepeating("SpawnItems", 0f, 4f);
+        InvokeRepeating("SpawnItems", 0f, spawnInterval);
     }
 
     public virtual IEnumerator DelayedDisabling(GameObject spawned)

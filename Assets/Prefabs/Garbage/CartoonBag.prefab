@@ -36,7 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5649310996657313227
 SpriteRenderer:
@@ -4960,7 +4960,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.015274242, y: -0.028366461}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4971,7 +4971,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.892, y: 0.876}
+  m_Size: {x: 0.31157866, y: 0.566151}
   m_EdgeRadius: 0
 --- !u!70 &2072521985017267094
 CapsuleCollider2D:
@@ -5023,3 +5023,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fact: Paper bag is decomposed in 1 month.
+  value: 100

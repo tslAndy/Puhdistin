@@ -135,7 +135,7 @@ public class TutorialScript : MonoBehaviour
         pauseController.ActivateBackground();
         pauseController.ActivateThroving();
         pauseController.ActivateWoodSpawner();
-        if ((counter == 0) || Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2"))
+        if (((counter == 0) || Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2")) && Time.timeScale != 0)
         {
             PrintOrMoveStatement();
         }
@@ -144,7 +144,7 @@ public class TutorialScript : MonoBehaviour
     private void GarbageCollectingPartLogic()
     {
         pauseController.ActivateThroving();
-        if ((counter == 0) || isTutorialGarbageCollected)
+        if (((counter == 0) || isTutorialGarbageCollected) && Time.timeScale != 0)
         {
             PrintOrMoveStatement();
         }
@@ -155,7 +155,7 @@ public class TutorialScript : MonoBehaviour
         squidAnimator.SetTrigger("IsPleasentEmote");
         pauseController.ActivateShipMovement();
         pauseController.ActivateBackground();
-        if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2") || (Input.GetAxis("Horizontal") != 0) || (counter == 0))
+        if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2") || (Input.GetAxis("Horizontal") != 0) || (counter == 0) && Time.timeScale != 0)
         {
             PrintOrMoveStatement(TutorialStages.TutorialGarbageCollectingPart);
         }
@@ -164,7 +164,7 @@ public class TutorialScript : MonoBehaviour
     private void BegginingPartLogic()
     {
         squidAnimator.SetTrigger("IsIdleEmote");
-        if ((Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2")))
+        if ((Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2")) && Time.timeScale != 0)
         {
             PrintOrMoveStatement(TutorialStages.TutorialMovingPart);
         }

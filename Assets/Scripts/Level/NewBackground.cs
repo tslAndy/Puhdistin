@@ -21,12 +21,12 @@ public class NewBackground : MonoBehaviour
             GameObject layer = new GameObject(backLayer.image.name + "_layers");
             layer.transform.SetParent(transform);
 
-            backLayer.width = backLayer.image.GetComponent<SpriteRenderer>().bounds.size.x - 0.015f;
+            backLayer.width = backLayer.image.GetComponent<SpriteRenderer>().bounds.size.x;
             for (int i = 0; i < 3; i++)
             {
                 GameObject image = Instantiate(backLayer.image, transform);
                 image.transform.SetParent(layer.transform);
-                image.transform.position += Vector3.right * backLayer.width * i;
+                image.transform.position += Vector3.right * backLayer.width * i ;
                 backLayer.images[i] = image;
             }
 

@@ -14,7 +14,8 @@ public class ObstaclesMoverScript : MonoBehaviour
     {
         foreach (var item in obstacles)
         {
-            item.transform.position -= new Vector3(speed * Time.deltaTime, 0);
+            if(item != null)
+                item.transform.position -= new Vector3(speed * Time.deltaTime, 0);
         }
     }
     public static void AddObstacle(GameObject obstacle)

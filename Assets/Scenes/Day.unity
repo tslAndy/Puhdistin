@@ -10626,6 +10626,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 48109663392562516, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5.2159424
+      objectReference: {fileID: 0}
     - target: {fileID: 155935234458957433, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -24651,11 +24655,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2600372894494589661, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -450.5
+      value: -399.8
       objectReference: {fileID: 0}
     - target: {fileID: 2600372894494589661, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -249.5
+      value: -224.1
       objectReference: {fileID: 0}
     - target: {fileID: 3890683965136991450, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
       propertyPath: useUnscaledTime
@@ -24719,11 +24723,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5761043016393751337, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -448.8
+      value: -400.6
       objectReference: {fileID: 0}
     - target: {fileID: 5761043016393751337, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -275.8
+      value: -243.1
       objectReference: {fileID: 0}
     - target: {fileID: 8605527678880923267, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
       propertyPath: useUnscaledTime

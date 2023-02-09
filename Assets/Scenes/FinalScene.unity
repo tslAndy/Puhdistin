@@ -7598,7 +7598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5255917300331179571, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5255917301744670217, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
       propertyPath: m_Color.b
@@ -9407,14 +9407,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 297.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3939214612233183052, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1395728228}
-    - target: {fileID: 3939214612233183052, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: FadeToLevel
-      objectReference: {fileID: 0}
     - target: {fileID: 5591190262516060018, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9530,26 +9522,6 @@ PrefabInstance:
     - target: {fileID: 5770220773092652020, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ExitPause
-      objectReference: {fileID: 0}
-    - target: {fileID: 6438530487642065119, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6438530487642065119, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1395728228}
-    - target: {fileID: 6438530487642065119, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: FadeToLevel
-      objectReference: {fileID: 0}
-    - target: {fileID: 6438530487642065119, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LevelChangerScript, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6438530487642065119, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 7672650780326302035, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
       propertyPath: m_AnchorMax.x

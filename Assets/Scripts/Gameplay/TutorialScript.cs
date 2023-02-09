@@ -99,7 +99,7 @@ public class TutorialScript : MonoBehaviour
 
         StartCoroutine(Print(textTutorial, textToPrint[counter], 0.05f));
 
-
+        Time.timeScale = 1;
         //play animation
     }
 

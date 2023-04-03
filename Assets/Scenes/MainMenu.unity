@@ -3457,6 +3457,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2600372894494589661, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -201.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3427437238148555476, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
       propertyPath: m_Name
       value: BubblesButtom
@@ -3603,7 +3607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5761043016393751337, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -186
+      value: -218.5
       objectReference: {fileID: 0}
     - target: {fileID: 5761043016393751337, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
       propertyPath: m_LocalPosition.z

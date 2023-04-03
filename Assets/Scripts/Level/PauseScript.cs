@@ -10,7 +10,7 @@ public class PauseScript : MonoBehaviour
     private bool isPaused = false;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P) && !isPaused)
+        if (Input.GetKeyDown(KeyCode.P) || (Input.GetKeyDown(KeyCode.Escape)) && !isPaused)
         {
             EnterPause();
         } else if(Input.GetKeyDown(KeyCode.P) && isPaused)

@@ -32,7 +32,6 @@ public class HarpoonInShipState : HarpoonBaseState
 
             stateManager.harpoonRb.bodyType = RigidbodyType2D.Dynamic;
             stateManager.harpoonRb.velocity = direction * stateManager.speed;
-            Debug.Log(direction * stateManager.speed * stateManager.harpoonStartPoint.transform.localScale.x);
             stateManager.SwitchState(stateManager.throwedState);
         }
 

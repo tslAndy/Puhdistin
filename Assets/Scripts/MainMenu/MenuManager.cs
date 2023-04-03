@@ -12,8 +12,16 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
-        settings = GameObject.Find("Settings");
-        DeactivateSettings();
+        if(GameObject.Find("Settings") != null)
+        {
+            settings = GameObject.Find("Settings");
+            DeactivateSettings();
+        }
+    }
+
+    private void OnLevelWasLoaded()
+    {
+        Time.timeScale = 1;
     }
     public void FadeToSettings()
     {

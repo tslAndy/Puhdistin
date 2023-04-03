@@ -10,6 +10,14 @@ public class TimerScript : MonoBehaviour
 
     [SerializeField]
     GameObject winCanvas;
+    
+    [SerializeField]
+    GameObject fishes;
+
+
+
+    [SerializeField]
+    GameObject loseCanvas;
 
     [SerializeField]
     private int startTime = 60;
@@ -29,13 +37,19 @@ public class TimerScript : MonoBehaviour
             milisecTimer = 1;
             counter -= 1;
         }
-
         timerText.text = counter.ToString();
-        if (counter <= 0)
+        if (counter <= 0 && ScoreTextScript.scoreValue > 0)
         {
             Time.timeScale = 0;
             winCanvas.SetActive(true);
-           
+            fishes.SetActive(true);
+
+
+            this.enabled = false;
+        } else if(counter <= 0)
+        {
+            Time.timeScale = 0;
+            loseCanvas.SetActive(true);
             this.enabled = false;
         }
     }

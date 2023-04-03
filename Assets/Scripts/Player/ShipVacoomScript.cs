@@ -17,7 +17,7 @@ public class ShipVacoomScript : MonoBehaviour
 
     private bool canUseVacoom = false;
 
-    public bool CanUseVacoom { get; set; }
+    public bool CanUseVacoom { set { canUseVacoom = value; } }
 
 
     // Start is called before the first frame update
@@ -28,7 +28,7 @@ public class ShipVacoomScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(Input.GetKey(KeyCode.Space) && canUseVacoom)
+       if (Input.GetKey(KeyCode.Space) && canUseVacoom)
         {
             ActivateAreaEffector();
             foreach (var effect in effects)
@@ -47,15 +47,18 @@ public class ShipVacoomScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("SmallGarbage"))
+        Debug.Log(collision.gameObject.layer);
+        Debug.Log(LayerMask.NameToLayer("SmallGarbage"));
+        if (collision.gameObject.CompareTag("SmallGarbage"))
         {
+            Debug.Log("WORKINGINSIDE");
+
             onGarbageCollecting.HandleCollect(collision.gameObject.tag, collision.gameObject);
             Destroy(collision.gameObject);
         }
     }
     private void ActivateAreaEffector()
     {
-        Debug.Log("Activated");
         areaEffector.enabled = true;
     }
     private void DeactivateAreaEffector()

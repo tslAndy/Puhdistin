@@ -15,7 +15,6 @@ public class ScoreAddingEffectScript : MonoBehaviour
     }
     public void ActivateEffect(int garbageValue)
     {
-        Debug.Log("Working");
         scoreEffectText.text = $"+ {garbageValue}";
         scoreEffectText.gameObject.SetActive(true);
     }

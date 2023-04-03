@@ -30232,7 +30232,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 3338810327389422223}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786695896}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca413ae15b3ec6c43aac3d03373c8c18, type: 3}
   m_Name: 
@@ -30243,7 +30243,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 3338810327389422223}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786695896}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccd5ca4228c6d8840a566f98f816931a, type: 3}
   m_Name: 
@@ -30276,7 +30276,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 3338810327389422223}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786695896}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dc2b639c64344c4486119499c82821f, type: 3}
   m_Name: 
@@ -35295,6 +35295,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3338810329161077328, guid: e88493c8f0a245c4bb03bf6bb52da912, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3338810329161077328, guid: e88493c8f0a245c4bb03bf6bb52da912, type: 3}
       propertyPath: pauseCanvas
       value: 
       objectReference: {fileID: 1045750315}
@@ -35310,6 +35314,14 @@ PrefabInstance:
       propertyPath: scoreEffectText
       value: 
       objectReference: {fileID: 410927846}
+    - target: {fileID: 3338810329161077332, guid: e88493c8f0a245c4bb03bf6bb52da912, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3338810329161077334, guid: e88493c8f0a245c4bb03bf6bb52da912, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3338810329161077335, guid: e88493c8f0a245c4bb03bf6bb52da912, type: 3}
       propertyPath: m_Name
       value: Level
@@ -35318,6 +35330,10 @@ PrefabInstance:
       propertyPath: fishes
       value: 
       objectReference: {fileID: 340621544}
+    - target: {fileID: 3338810329161077355, guid: e88493c8f0a245c4bb03bf6bb52da912, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3338810329161077355, guid: e88493c8f0a245c4bb03bf6bb52da912, type: 3}
       propertyPath: startTime
       value: 90
@@ -35376,6 +35392,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3338810329161077357, guid: e88493c8f0a245c4bb03bf6bb52da912, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3338810329161077359, guid: e88493c8f0a245c4bb03bf6bb52da912, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

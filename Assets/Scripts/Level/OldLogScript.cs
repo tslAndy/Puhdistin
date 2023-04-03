@@ -18,7 +18,6 @@ public class OldLogScript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(health);
         if (collision.gameObject.CompareTag("Harpoon") && collision.gameObject.layer == LayerMask.NameToLayer("Harpoon"))
         {
             animator.SetTrigger("TakeDamage");

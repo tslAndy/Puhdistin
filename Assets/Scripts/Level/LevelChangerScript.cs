@@ -37,5 +37,10 @@ public class LevelChangerScript : MonoBehaviour
     {
         bubblesTop.Play();
     }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().ToString());
+    }
   
 }

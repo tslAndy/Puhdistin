@@ -126,9 +126,36 @@ public class TutorialScript : MonoBehaviour
             case TutorialStages.TutorialLogBouncingPart:
                 BouncingPartLogic();
                 break;
+            case TutorialStages.TutorialOldLogDestroyingPart:
+                OldLogDestroyingPartLogic();
+                break;
+            case TutorialStages.TutorialVacoomingPart:
+                VacoomingPartLogic();
+                break;
         }
     }
 
+    private void VacoomingPartLogic()
+    {
+        pauseController.ActivateVacoom();
+        pauseController.ActivateSmallGarbageSpawner();
+        if (((counter == 0) || Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2")) && Time.timeScale != 0)
+        {
+            PrintOrMoveStatement();
+        }
+    }
+
+    private void OldLogDestroyingPartLogic()
+    {
+        pauseController.ActivateShipMovement();
+        pauseController.ActivateBackground();
+        pauseController.ActivateThroving();
+        pauseController.ActivateWoodSpawner();
+        if (((counter == 0) || Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2")) && Time.timeScale != 0)
+        {
+            PrintOrMoveStatement(TutorialStages.TutorialVacoomingPart);
+        }
+    } 
     private void BouncingPartLogic()
     {
         pauseController.ActivateShipMovement();

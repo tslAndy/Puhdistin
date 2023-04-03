@@ -6,31 +6,64 @@ using UnityEngine;
 
 public class ScoreTextScript : MonoBehaviour
 {
-    private TextMeshProUGUI winScoreText, score;
+    private static TextMeshProUGUI winScoreText, score;
 
-    private int scoreValue;
+    public static int scoreValue = 0;
 
+    public bool useTotalScore = false;
+
+    private float delay = 0.05f;
+
+    private void OnLevelWasLoaded(int level)
+    {
+        scoreValue = 0;
+        Time.timeScale = 1;
+    }
     void Start()
     {
         score = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
         winScoreText = GetComponent<TextMeshProUGUI>();
-        scoreValue = CleanString();
+        if (useTotalScore)
+        {
+            scoreValue = TotalScoreScript.totalPlayerScore;
+        } else
+        {
+            scoreValue = CleanString();
+        }
+
+        if(scoreValue > 15)
+        {
+            delay = 0.005f;
+        }
+        if(scoreValue > 100)
+        {
+            delay = 0.0005f;
+        }
         StartCoroutine(PrintScore());
     }
 
     
 
-    private int CleanString()
+    public static int CleanString()
     {
         return Convert.ToInt32(score.text.Trim('S', 'c', 'o', 'r', 'e', ':', ' '));
     }
 
     IEnumerator PrintScore()
     {
-        for (int i = 0; i <= scoreValue; i++)
+        for (int i = (int)(scoreValue * 0.8f); i <= scoreValue; i++)
         {
-            yield return new WaitForSecondsRealtime(.005f);
-            winScoreText.text = i.ToString();
+            yield return new WaitForSecondsRealtime(delay);
+            if (useTotalScore)
+            {
+                Debug.Log(scoreValue);
+                Debug.Log("Total score: " + i);
+                score.text = "Total score: " + i;
+
+            } else
+            {
+                winScoreText.text = i.ToString();
+            }
         }
     }
 }

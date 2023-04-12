@@ -33,7 +33,7 @@ public class ArtificialPauseScript : MonoBehaviour
     private void Awake()
     {
         //storing speed values for pause effect in tutorial
-        background = backgroundScript.BackLayers;
+        //background = backgroundScript.BackLayers;
         
 
         DeactivateAllSpawners();
@@ -51,10 +51,10 @@ public class ArtificialPauseScript : MonoBehaviour
     }
     public void ActivateBackground()
     {
-        for (int i = 0; i < background.Length; i++)
+        /*for (int i = 0; i < background.Length; i++)
         {
             background[i].speed = backgroundSpeedValues[background[i].image];
-        }
+        }*/
     }
     public void DeactivateAllSpawners()
     {

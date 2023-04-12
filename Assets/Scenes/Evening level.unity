@@ -7558,11 +7558,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2600372894494589661, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -400.6
+      value: -400.11
       objectReference: {fileID: 0}
     - target: {fileID: 2600372894494589661, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -205.49
+      value: -222.11
       objectReference: {fileID: 0}
     - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
       propertyPath: m_RootOrder
@@ -7630,11 +7630,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5761043016393751337, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -399.1
+      value: -400.08
       objectReference: {fileID: 0}
     - target: {fileID: 5761043016393751337, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -214.22
+      value: -230.63
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -8678,7 +8678,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &2063003891
 AudioSource:
   m_ObjectHideFlags: 0

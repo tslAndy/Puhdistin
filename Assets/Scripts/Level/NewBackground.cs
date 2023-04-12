@@ -36,15 +36,18 @@ public class NewBackground : MonoBehaviour
 
     void Update()
     {
+        float dt = Time.deltaTime;
         foreach (BackLayer backLayer in backLayers)
         {
-            float dx = backLayer.speed * Time.deltaTime;
+            float dx = backLayer.speed * dt;
+
             foreach (GameObject image in backLayer.images)
             {
+                
                 image.transform.position += Vector3.left * dx;
 
          
-                if (image.transform.position.x + backLayer.width / 2 < 
+                if (image.GetComponent<SpriteRenderer>().bounds.max.x < 
                     Camera.main.ViewportToWorldPoint(Vector3.zero).x)
                 {
                     image.transform.position += Vector3.right * backLayer.width * 3;

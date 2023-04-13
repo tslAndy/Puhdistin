@@ -43,11 +43,11 @@ public class ArtificialPauseScript : MonoBehaviour
 
     public void DeactivateBackground()
     {
-        for (int i = 0; i < background.Length; i++)
+        /*for (int i = 0; i < background.Length; i++)
         {
             backgroundSpeedValues.Add(background[i].image, background[i].speed);
             background[i].speed = 0;
-        }
+        }*/
     }
     public void ActivateBackground()
     {

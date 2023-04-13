@@ -8959,6 +8959,10 @@ MonoBehaviour:
     speed: 2
   - image: {fileID: 420894453}
     speed: 3
+  - image: {fileID: 1059283459}
+    speed: 0.5
+  - image: {fileID: 1072148919}
+    speed: 0.7
 --- !u!1 &1536027984
 GameObject:
   m_ObjectHideFlags: 0

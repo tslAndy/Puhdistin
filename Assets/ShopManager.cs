@@ -15,8 +15,6 @@ public class ShopManager : MonoBehaviour
     public enum HarpoonUpgrades
     {
         HarpoonWith1,
-        HarpoonWith3,
-        HarpoonWith5
     }
     void Start()
     {
@@ -33,12 +31,6 @@ public class ShopManager : MonoBehaviour
         {
             case HarpoonUpgrades.HarpoonWith1:
                 upgradeButtons[0].enabled = true;
-                break;
-            case HarpoonUpgrades.HarpoonWith3:
-                upgradeButtons[1].enabled = true;
-                break;
-            case HarpoonUpgrades.HarpoonWith5:
-                upgradeButtons[2].enabled = true;
                 break;
         }
     }

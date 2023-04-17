@@ -15,6 +15,7 @@ public class OnGarbageCollecting : MonoBehaviour
     public int score = 0;
     private FactsSystem factsSystem;
 
+
     private int coroutineCounter = 1;
 
 

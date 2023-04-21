@@ -1326,7 +1326,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &126082447
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14667,6 +14667,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1275806480}
+    - target: {fileID: 3136448604752797917, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
+      propertyPath: m_text
+      value: Buy second harpoon (400)
+      objectReference: {fileID: 0}
     - target: {fileID: 3343045627426298552, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

@@ -9144,7 +9144,8 @@ MonoBehaviour:
       stageText:
       - "It\u2019s me again!"
       - Try to shoot harpoon in the logs! It will bounce!
-      - Good Luck!
+      - You can upgrade youe harpoon in the pause menu!
+      - Good luck!
 --- !u!1 &1147182279
 GameObject:
   m_ObjectHideFlags: 0

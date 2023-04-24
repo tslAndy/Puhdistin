@@ -14314,7 +14314,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444587327}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.14, y: -1.48, z: -10}
+  m_LocalPosition: {x: -0.14, y: -1.43, z: -10}
   m_LocalScale: {x: 1, y: 0.95, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14671,6 +14671,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: FinalScene
       objectReference: {fileID: 0}
+    - target: {fileID: 1238156882325168104, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1234.4144
+      objectReference: {fileID: 0}
+    - target: {fileID: 1238156882325168104, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -993.8986
+      objectReference: {fileID: 0}
+    - target: {fileID: 1238156882325168104, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -55.070557
+      objectReference: {fileID: 0}
+    - target: {fileID: 1238156882325168104, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 496.9544
+      objectReference: {fileID: 0}
     - target: {fileID: 2653584031253717504, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -14694,6 +14710,14 @@ PrefabInstance:
     - target: {fileID: 5591190262482073715, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
       propertyPath: m_fontSize
       value: 37.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591190262482073715, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
+      propertyPath: m_margin.x
+      value: -268.8565
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591190262482073715, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
+      propertyPath: m_margin.z
+      value: -282.8035
       objectReference: {fileID: 0}
     - target: {fileID: 5591190262482073715, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
       propertyPath: m_fontSizeBase

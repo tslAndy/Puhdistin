@@ -10870,6 +10870,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 104959111}
+    - target: {fileID: 1238156882325168104, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1232.2417
+      objectReference: {fileID: 0}
+    - target: {fileID: 1238156882325168104, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -1023.4361
+      objectReference: {fileID: 0}
+    - target: {fileID: 1238156882325168104, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -53.224487
+      objectReference: {fileID: 0}
+    - target: {fileID: 1238156882325168104, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 511.72305
+      objectReference: {fileID: 0}
     - target: {fileID: 1729713687401121165, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -10963,6 +10979,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5591190262482073715, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591190262482073715, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
       propertyPath: m_fontSize
       value: 36.7
       objectReference: {fileID: 0}
@@ -10972,11 +10992,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5591190262482073715, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
       propertyPath: m_margin.x
-      value: -206.89545
+      value: -266.89035
       objectReference: {fileID: 0}
     - target: {fileID: 5591190262482073715, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
       propertyPath: m_margin.z
-      value: -222.76857
+      value: -282.1428
       objectReference: {fileID: 0}
     - target: {fileID: 5591190262482073715, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
       propertyPath: m_fontSizeBase

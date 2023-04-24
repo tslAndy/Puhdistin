@@ -6,6 +6,7 @@ using TMPro;
 
 public class OnGarbageCollecting : MonoBehaviour
 {
+
     [SerializeField]
     private TextMeshProUGUI scoreText, factText, scoreEffectText;
 

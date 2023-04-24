@@ -5006,3 +5006,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fact: Aluminium can is decomposed in 200 years.
+  value: 10

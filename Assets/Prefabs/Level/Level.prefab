@@ -172,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ba0828ce48911438e2581a121a13c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectedSound: {fileID: 0}
   scoreText: {fileID: 0}
   factText: {fileID: 0}
   scoreEffectText: {fileID: 0}

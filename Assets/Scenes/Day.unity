@@ -35922,6 +35922,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3338810328326281655, guid: e88493c8f0a245c4bb03bf6bb52da912, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 3338810328326281656, guid: e88493c8f0a245c4bb03bf6bb52da912, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3338810329161077328, guid: e88493c8f0a245c4bb03bf6bb52da912, type: 3}
       propertyPath: pauseCanvas
       value: 

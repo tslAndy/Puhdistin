@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 5649310996657313227}
   - component: {fileID: 8125411018506287063}
   - component: {fileID: 1479967531072990853}
-  - component: {fileID: 4329898405336286755}
   - component: {fileID: 2072521985017267094}
   - component: {fileID: 8738314622088708807}
   - component: {fileID: -7579318115562351733}
+  - component: {fileID: 1910295321586469218}
   m_Layer: 6
   m_Name: CartoonBag
   m_TagString: Garbage
@@ -4947,32 +4947,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!61 &4329898405336286755
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5649310996657313226}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.015274242, y: -0.028366461}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.892, y: 0.876}
-    newSize: {x: 0.66, y: 0.6}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.31157866, y: 0.566151}
-  m_EdgeRadius: 0
 --- !u!70 &2072521985017267094
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5024,3 +4998,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fact: Paper bag is decomposed in 1 month.
   value: 100
+--- !u!58 &1910295321586469218
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5649310996657313226}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.014157712}
+  serializedVersion: 2
+  m_Radius: 0.37521145

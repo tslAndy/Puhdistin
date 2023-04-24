@@ -5,6 +5,9 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField]
+    private float minX, maxX;
+
+    [SerializeField]
     private float speed;
 
     [SerializeField]
@@ -24,8 +27,9 @@ public class Movement : MonoBehaviour
     private void Update()
     {
         float xDirection = Input.GetAxisRaw("Horizontal");
-        if(CanMove)
-            transform.position += Vector3.right * speed * xDirection * Time.deltaTime;
+        float dx = speed * xDirection * Time.deltaTime;
+        if (CanMove && (minX < transform.position.x + dx && transform.position.x + dx < maxX))
+            transform.position += Vector3.right * dx;
 
         if(CanMove)
             valueForSin += dSin * Time.deltaTime;

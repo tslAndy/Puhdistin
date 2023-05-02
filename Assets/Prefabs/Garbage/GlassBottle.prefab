@@ -5007,7 +5007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fact: Decomposing time is undetermined.
-  value: 3
+  value: 80
 --- !u!70 &925818410727368565
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -5006,3 +5006,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fact: Battery is decomposed in 100 years.
+  value: 100

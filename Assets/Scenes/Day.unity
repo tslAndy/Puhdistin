@@ -5012,7 +5012,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 408662154007229888, guid: b993fad60266b3d4cbf6d2a1020f604c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.62
+      value: -4.11
       objectReference: {fileID: 0}
     - target: {fileID: 408662154007229888, guid: b993fad60266b3d4cbf6d2a1020f604c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11232,6 +11232,10 @@ PrefabInstance:
     - target: {fileID: 5778847080222568390, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: AnotherShop, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026463322050733245, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6438530487642065119, guid: 37f98a3c4b094bc439b91bdda8b9a1dd, type: 3}
       propertyPath: m_TargetGraphic
@@ -22435,7 +22439,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835537332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.98, y: 0.43, z: 3.54}
+  m_LocalPosition: {x: -6.5400004, y: 0.43, z: 3.54}
   m_LocalScale: {x: 0.8147805, y: 0.81478053, z: 0.81478053}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22458,8 +22462,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 187635baab96910439e7ae489b98a763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minX: 0
-  maxX: 0
+  minX: -6.62
+  maxX: 5.15
   speed: 4
   dSin: 0.3
 --- !u!68 &835537336

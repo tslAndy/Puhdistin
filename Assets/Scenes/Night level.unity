@@ -252,7 +252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 408662154007229888, guid: b993fad60266b3d4cbf6d2a1020f604c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.073
+      value: -0.21299993
       objectReference: {fileID: 0}
     - target: {fileID: 408662154007229888, guid: b993fad60266b3d4cbf6d2a1020f604c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2552,7 +2552,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427946332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.887, y: 1.06, z: 0}
+  m_LocalPosition: {x: -5.887, y: 0.92, z: 0}
   m_LocalScale: {x: 0.8147805, y: 0.81478053, z: 0.81478053}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15180,6 +15180,10 @@ PrefabInstance:
     - target: {fileID: 5255917300331179532, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255917300331179534, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
+      propertyPath: levelToLoad
+      value: FinalScene
       objectReference: {fileID: 0}
     - target: {fileID: 5255917300331179571, guid: d21a9c34a4fca314e9d56f82c281380b, type: 3}
       propertyPath: m_Name
